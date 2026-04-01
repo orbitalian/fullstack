@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1>Заголовок першого рівня</h1>
+            <p> Правило застосовується до всіх дочірніх елементів <strong>H1</strong> для тегу <strong>DIV</strong><br>
+                вага &mdash; 0 | 0 | 0 | 2
+            </p>
+                <span>
+                    <h1>Теж заголовок першого рівня</h1>
+                    <p>
+                        але в нього інший рівень вкладеності, тож правило його не стосується
+                    </p>
+                </span>   
+        </div>
+<hr>
+        <div>
+            <h2 class="header">Заголовок другого рівня</h2>
+            <p> специфічність застосовується до всіх елементів <strong>H2</strong> із завданим класом, які знаходяться всередині тегу <strong>DIV</strong><br>
+                вага &mdash; 0 | 0 | 1 | 1
+            </p>
+        </div>
+<hr>
+        <div>
+            <p id="main-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam aliquid eaque minus similique error doloremque. Odit necessitatibus consequuntur earum voluptatibus quod sequi quibusdam esse amet veniam? Delectus, magnam? Fugiat, praesentium!
+            </p>
+            <p>
+                специфічність, яка застосовується до ідентифікатора, тож його вага становить:<br>
+                0 | 1 | 0 | 0
+            </p>
+        </div>
+<hr>
+        <div>
+            <h2>Специфічність із вбудованим стилем</h2>
+            <p style="font-size: 18px; color: chocolate; font-weight: 600;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium iure ducimus laudantium nihil hic vel dolor et similique modi deserunt a, harum id incidunt accusamus labore rerum doloremque exercitationem ipsam!
+            </p>
+            <p>
+                вага специфічності<br>
+                1 | 0 | 0 | 0
+            </p>
+        </div>
+<hr>
+        <div>
+            <div class="blue-text">
+                <p class="txt1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius modi optio nostrum architecto, ea rem accusamus? Perspiciatis magni molestiae, recusandae aperiam ipsum eius totam, aut qui tempora dolore dolores modi!</p>
+                <p class="txt2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea temporibus dolores quos totam cumque labore voluptas recusandae voluptatem iste sed ipsum reiciendis accusantium illum, eligendi eveniet voluptatum eos. Magnam, eius?</p>
+                <p class="txt3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt repudiandae, beatae reiciendis excepturi culpa repellat vel. Aut eum, repellat vero sunt ullam asperiores quia aliquid, omnis autem quae nulla perferendis.</p>
+            </div>
+            <div>
+                <p>
+                    вага специфічності<br>
+                    0 | 0 | 2 | 1
+                </p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

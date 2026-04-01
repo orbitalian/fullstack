@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+}
+
+H1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+}
+
+H2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+ul {
+    padding: 0;
+}
+
+.container {
+    max-width: 1280px;
+    margin: auto;
+    padding: 50px;
+    /*background-color: #e0e0e0;*/
+}
+
+.main {
+    max-width: 1280px;
+    background-color: #e0e0e0;
+    margin: 0 auto;
+}
+
+.main-menu {
+    margin: 0 auto;
+    max-width: 1280px;
+    background-color: azure;
+    /*padding: 25px;*/
+}
+
+.main-menu-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+
+}
+
+.menu-item {
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: bold;
+    font-variant-caps: all-petite-caps;
+    letter-spacing: 1.10px;
+    line-height: 1.5;
+}
+
+.menu-item a {
+    text-decoration: none;
+}
+
+.menu-item:hover {
+    scale: 1.25;
+}
+
+hr {
+    border-style: dashed;
+    border-color: chocolate;
+    border-width: 2px;
+    margin: 0;
+}
+
+pre {
+    text-align: center;
+}
+
+.footer {
+    max-width: 1280px;
+    margin: auto;
+    background-color: lightyellow;
+    
+}
+
+.footer-text {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+}
