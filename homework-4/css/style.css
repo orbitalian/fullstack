@@ -27,7 +27,8 @@ div .header {
 }
 
 #main-text {
-    color: blueviolet;
+    /*color: blueviolet;*/
+    color: darkmagenta;
 }
 
 .blue-text {
