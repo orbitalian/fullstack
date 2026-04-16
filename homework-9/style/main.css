@@ -1,0 +1,154 @@
+.content {
+    width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+    /*background-color: aqua;*/
+}
+
+.header {
+    background-color: #EEEFF1;
+}
+
+.nav {
+    list-style: none;
+}
+
+.nav {
+    padding-top: 79px;
+}
+
+.content .nav {
+    display: flex;
+    gap: 48px;
+}
+
+.nav-item a{
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 10%;
+    color: black;
+}
+
+.active a{
+    font-weight: 500;
+    color: #34547A;
+}
+
+.nav-item a:hover {
+    text-decoration: underline;
+}
+
+.cta {
+    padding-top: 162px;
+    background-color: #EEEFF1;
+}
+
+.cta p {
+    padding-top: 60px;
+    width: 540px;
+}
+
+.cta button {
+    margin-top: 65px;
+    margin-bottom: 141px;
+    padding: 25px 41px;
+    background-color: #34547A;
+    border: 0;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 10%;
+}
+
+.cta button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.about {
+    margin-top: 112px;
+    text-align: center;
+}
+
+.about p {
+    padding-top: 50px;
+    width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.projects {
+    background-color: #34547A;
+    color: #ffffff;
+    margin-top: 100px;
+}
+
+.projects p {
+    color: #fff;
+}
+
+.proj {
+    display: flex;
+    /*flex-wrap: wrap;*/
+    justify-content: center;
+    gap: 49px;
+    padding: 100px 0px;
+}
+
+.proj-item {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.proj-item img {
+    padding-right: 20px;
+}
+
+.proj-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.demo {
+    background-color: #EEEFF1;
+    padding: 100px 0px;
+}
+
+.demo-work {
+    width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.demo-work h2 {
+    padding-bottom: 50px;
+}
+
+.demo-work p {
+    padding-bottom: 50px;
+}
+
+.demo-video {
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.demo-play {
+    position: absolute;
+    right: calc(100% / 2 - 50px);
+    bottom: calc(100% / 2 - 50px);
+}
+
+.footer {
+    background-color: #34547A;
+    padding: 50px 0px;
+    color: #fff;
+}
+
+.footer p {
+    color: #fff;
+    padding-top: 20px;
+    font-size: 13px;
+}
