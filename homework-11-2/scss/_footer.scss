@@ -1,0 +1,27 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.footer {
+    background-color: $color-primary;
+    padding: 50px 0px;
+    color: $color-white;
+ 
+    p {
+        color: $color-white;
+        padding-top: 20px;
+        font-size: 13px;
+ 
+        @include small {
+            padding-top: 10px;
+        }
+    }
+ 
+    @include mobile {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+ 
+    @include small {
+        text-align: center;
+    }
+}

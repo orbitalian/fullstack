@@ -1,0 +1,25 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.header {
+    background-color: $color-bg;
+}
+
+.burger {
+    display: none;
+ 
+    @include small {
+        display: block;
+        background-color: $color-primary;
+        width: 100%;
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        cursor: pointer;
+ 
+        img {
+            width: 50px;
+            display: inline-block;
+        }
+    }
+}

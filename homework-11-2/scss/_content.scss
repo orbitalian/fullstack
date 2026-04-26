@@ -1,0 +1,20 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.content {
+    width: $content-width-default;
+    margin-left: auto;
+    margin-right: auto;
+ 
+    @include wide {
+        width: $content-width-wide;
+    }
+ 
+    @include tablet {
+        width: $content-width-tablet;
+    }
+ 
+    @include mobile {
+        width: $content-width-mobile;
+    }
+}

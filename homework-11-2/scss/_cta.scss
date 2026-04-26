@@ -1,0 +1,51 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.cta {
+    padding-top: 162px;
+    background-color: $color-bg;
+ 
+    p {
+        padding-top: 60px;
+        width: 540px;
+ 
+        @include small {
+            width: 100%;
+            padding-top: 40px;
+        }
+    }
+ 
+    button {
+        margin-top: 65px;
+        margin-bottom: 141px;
+        padding: 25px 41px;
+        background-color: $color-primary;
+        border: 0;
+        color: $color-white;
+        text-transform: uppercase;
+        letter-spacing: 10%;
+ 
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+ 
+        @include small {
+            margin-bottom: 100px;
+        }
+    }
+ 
+    @include mobile {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+ 
+    @include small {
+        text-align: center;
+        padding-top: 100px;
+ 
+        h1 {
+            font-size: 36px;
+        }
+    }
+}

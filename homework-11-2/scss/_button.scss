@@ -1,0 +1,14 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+button {
+    background-color: $color-primary;
+    color: $color-white;
+    padding: 25px 41px;
+    border: 0;
+    text-transform: uppercase;
+    letter-spacing: 10%;
+    margin-top: 65px;
+    margin-bottom: 141px;
+    cursor: pointer;
+}

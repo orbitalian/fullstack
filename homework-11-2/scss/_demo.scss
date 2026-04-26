@@ -1,0 +1,75 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.demo {
+    background-color: $color-bg;
+    padding: 100px 0px;
+}
+ 
+.demo-work {
+    text-align: center;
+ 
+    h2 {
+        padding-bottom: 50px;
+ 
+        @include small {
+            font-size: 26px;
+        }
+    }
+ 
+    p {
+        width: 540px;
+        padding-bottom: 50px;
+        margin-left: auto;
+        margin-right: auto;
+ 
+        @include small {
+            width: 100%;
+        }
+    }
+ 
+    @include mobile {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+ 
+.demo-video {
+    position: relative;
+    left: 0px;
+    top: 0px;
+ 
+    img {
+        @include wide {
+            width: $content-width-wide;
+        }
+ 
+        @include tablet {
+            width: $content-width-tablet;
+        }
+ 
+        @include mobile {
+            width: 100%;
+        }
+    }
+}
+ 
+.demo-play {
+    position: absolute;
+    right: calc(100% / 2 - 50px);
+    bottom: calc(100% / 2 - 50px);
+ 
+    img {
+        @include wide {
+            width: 90%;
+        }
+ 
+        @include tablet {
+            width: 70%;
+        }
+ 
+        @include mobile {
+            width: 80%;
+        }
+    }
+}
