@@ -1,0 +1,84 @@
+rect, circle, ellipse {
+    fill: #896d6d;
+}
+
+.block-11  {
+    rect {
+        fill: aqua;
+        stroke: brown;
+        stroke-width: 5px;
+    }
+    
+}
+
+.block-22 {
+    rect {
+        fill: aquamarine;
+        stroke: chocolate;
+        stroke-width: 5px;
+    }
+}
+
+.block-33 {
+    circle {
+        fill: cadetblue;
+        stroke: darkred;
+        stroke-width: 5px;
+    }
+}
+
+.block-44 {
+    ellipse {
+        fill: lightblue;
+        stroke: lightcoral;
+        stroke-width: 5px;
+    }
+}
+
+.block-111 {
+    rect {
+        cursor: pointer;
+
+        &:hover {
+            fill: chartreuse;
+            stroke: crimson;
+            stroke-width: 10px;
+        }
+    }
+}
+
+.block-222 {
+    rect {
+        cursor: pointer;
+
+        &:hover {
+            fill: rgb(32, 140, 97);
+            stroke: rgb(140, 171, 55);
+            stroke-width: 10px;
+        }
+    }
+}
+
+.block-333 {
+    circle {
+        cursor: pointer;
+
+        &:hover {
+            fill: rgb(32, 32, 140);
+            stroke: rgb(221, 111, 203);
+            stroke-width: 10px;
+        }
+    }
+}
+
+.block-444 {
+    ellipse {
+        cursor: pointer;
+
+        &:hover {
+            fill: rgb(231, 59, 91);
+            stroke: rgb(55, 171, 136);
+            stroke-width: 10px;
+        }
+    }
+}

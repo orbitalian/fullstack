@@ -1,0 +1,184 @@
+.content {
+  width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+@media (max-width: 1280px) {
+  .content {
+    width: 960px;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 1024px) {
+  .content {
+    width: 720px;
+  }
+}
+@media (max-width: 768px) {
+  .content {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 1280px) {
+  .content .content {
+    width: 960px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+.svg {
+  width: 270px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0px 10px 0 #c3c3c3;
+}
+.svg.block-1, .svg.block-11, .svg.block-111 {
+  background-color: antiquewhite;
+}
+.svg.block-2, .svg.block-22, .svg.block-222 {
+  background-color: bisque;
+}
+.svg.block-3, .svg.block-33, .svg.block-333 {
+  background-color: burlywood;
+}
+.svg.block-4, .svg.block-44, .svg.block-444 {
+  background-color: lemonchiffon;
+}
+
+@media (max-width: 1280px) {
+  .svg {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 768px) {
+  .svg {
+    width: 270px;
+    padding: 10px;
+  }
+}
+
+footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 50px;
+  font-family: sans-serif;
+  font-size: 14px;
+  background-color: #c3c3c3;
+}
+
+.copyright {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+* * {
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+rect, circle, ellipse {
+  fill: #896d6d;
+}
+
+.block-11 rect {
+  fill: aqua;
+  stroke: brown;
+  stroke-width: 5px;
+}
+
+.block-22 rect {
+  fill: aquamarine;
+  stroke: chocolate;
+  stroke-width: 5px;
+}
+
+.block-33 circle {
+  fill: cadetblue;
+  stroke: darkred;
+  stroke-width: 5px;
+}
+
+.block-44 ellipse {
+  fill: lightblue;
+  stroke: lightcoral;
+  stroke-width: 5px;
+}
+
+.block-111 rect {
+  cursor: pointer;
+}
+.block-111 rect:hover {
+  fill: chartreuse;
+  stroke: crimson;
+  stroke-width: 10px;
+}
+
+.block-222 rect {
+  cursor: pointer;
+}
+.block-222 rect:hover {
+  fill: rgb(32, 140, 97);
+  stroke: rgb(140, 171, 55);
+  stroke-width: 10px;
+}
+
+.block-333 circle {
+  cursor: pointer;
+}
+.block-333 circle:hover {
+  fill: rgb(32, 32, 140);
+  stroke: rgb(221, 111, 203);
+  stroke-width: 10px;
+}
+
+.block-444 ellipse {
+  cursor: pointer;
+}
+.block-444 ellipse:hover {
+  fill: rgb(231, 59, 91);
+  stroke: rgb(55, 171, 136);
+  stroke-width: 10px;
+}
+
+h1 {
+  font-family: sans-serif;
+  font-size: 36px;
+  padding: 25px 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  font-family: sans-serif;
+  font-size: 30px;
+  color: #636363;
+  padding: 25px 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img-txt {
+  font-family: sans-serif;
+  font-size: 16px;
+  padding: 25px 0px;
+}
+
+/*# sourceMappingURL=main.css.map */
