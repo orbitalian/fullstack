@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Bootstap</title>
+</head>
+<body>
+    <header>
+        <div class="text-bg-secondary p-5">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-12">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a class="nav-link active link-light" href="#" alt="Головна сторінка">Головна</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle link-light" data-bs-toggle="dropdown" href="#" alt="Продукція">Продукція</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#" alt="Продукт-1">Продукт-1</a></li>
+                                    <li><a class="dropdown-item" href="#" alt="Продукт-2">Продукт-2</a></li>
+                                    <li><a class="dropdown-item" href="#" alt="Продукт-3">Продукт-3</a></li>
+                                    <li><a class="dropdown-item" href="#" alt="Продукт-4">Продукт-4</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle link-light" data-bs-toggle="dropdown" href="#" alt="Послуги">Послуги</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#" alt="Послуга-1">Послуга-1</a></li>
+                                    <li><a class="dropdown-item" href="#" alt="Послуга-2">Послуга-2</a></li>
+                                    <li><a class="dropdown-item" href="#" alt="Послуга-3">Послуга-3</a></li>
+                                    <li><a class="dropdown-item" href="#" alt="Послуга-4">Послуга-4</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle link-light" data-bs-toggle="dropdown" href="#" alt="Команда">Команда</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#" alt="Менеджер-1">Менеджер-1</a></li>
+                                    <li><a class="dropdown-item" href="#" alt="Менеджер-2">Менеджер-2</a></li>
+                                    <li><a class="dropdown-item" href="#" alt="Менеджер-3">Менеджер-3</a></li>
+                                    <li><a class="dropdown-item" href="#" alt="Менеджер-4">Менеджер-4</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link-light" href="#" alt="Контакти">Контакти</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </header>
+    <main>
+        <div class="container text-center">
+            <div class="row">        
+                <div class="col-3 text-bg-dark p-2">
+                    <div id="carouselExampleIndicators" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./img/paisagem_pic-1.jpg" class="d-block w-100" alt="перше зображення">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/palmroad_pic-2.jpg" class="d-block w-100" alt="друге зображення">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/outumnroad_pic-3.jpg" class="d-block w-100" alt="третє зображення">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/forestroad_pic-4.jpg" class="d-block w-100" alt="четверте зображення">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/winterroad_pic-5.jpg" class="d-block w-100" alt="п'яте зображення">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Попереднє</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Наступне</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div>
+                        <h2>Розміщеня вмісту за допомогою компонента акордеон</h2>
+                    </div>
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                    Назва вмісту 1
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p class="text-start">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat doloribus omnis inventore illo accusamus nobis? Nobis tenetur possimus maiores ab vero numquam beatae soluta saepe molestiae nemo pariatur, tempore fuga aperiam quo! Vitae hic atque assumenda est sequi nisi explicabo exercitationem? Adipisci dolore corrupti autem aliquam et eveniet non porro.</p>
+                                    <p class="text-start">Sequi commodi sunt numquam repellat officia quae voluptatem vitae quas ipsum temporibus, dolore exercitationem quibusdam quo, ducimus ea unde id molestias minus reprehenderit veritatis incidunt sit debitis! Velit consequatur non quaerat ipsam sit vitae, adipisci tempora molestiae repellendus quod animi aspernatur fugiat totam cupiditate temporibus esse quisquam cum atque accusamus?</p>
+                                    <p class="text-start">Ratione impedit reiciendis laudantium amet recusandae. Quod nisi ea suscipit sed accusamus quae aliquam! Exercitationem quasi esse nesciunt repellendus sint beatae cumque ullam minus voluptatibus, nisi similique sapiente assumenda quis dolor, sunt earum obcaecati sit in repellat commodi hic aliquam ut iure. Cumque velit veniam voluptate consequuntur veritatis libero quidem.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                    Назва вмісту 2
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p class="text-start">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat doloribus omnis inventore illo accusamus nobis? Nobis tenetur possimus maiores ab vero numquam beatae soluta saepe molestiae nemo pariatur, tempore fuga aperiam quo! Vitae hic atque assumenda est sequi nisi explicabo exercitationem? Adipisci dolore corrupti autem aliquam et eveniet non porro.</p>
+                                    <p class="text-start">Sequi commodi sunt numquam repellat officia quae voluptatem vitae quas ipsum temporibus, dolore exercitationem quibusdam quo, ducimus ea unde id molestias minus reprehenderit veritatis incidunt sit debitis! Velit consequatur non quaerat ipsam sit vitae, adipisci tempora molestiae repellendus quod animi aspernatur fugiat totam cupiditate temporibus esse quisquam cum atque accusamus?</p>
+                                    <p class="text-start">Ratione impedit reiciendis laudantium amet recusandae. Quod nisi ea suscipit sed accusamus quae aliquam! Exercitationem quasi esse nesciunt repellendus sint beatae cumque ullam minus voluptatibus, nisi similique sapiente assumenda quis dolor, sunt earum obcaecati sit in repellat commodi hic aliquam ut iure. Cumque velit veniam voluptate consequuntur veritatis libero quidem.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    Назва вмісту 3
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p class="text-start">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat doloribus omnis inventore illo accusamus nobis? Nobis tenetur possimus maiores ab vero numquam beatae soluta saepe molestiae nemo pariatur, tempore fuga aperiam quo! Vitae hic atque assumenda est sequi nisi explicabo exercitationem? Adipisci dolore corrupti autem aliquam et eveniet non porro.</p>
+                                    <p class="text-start">Sequi commodi sunt numquam repellat officia quae voluptatem vitae quas ipsum temporibus, dolore exercitationem quibusdam quo, ducimus ea unde id molestias minus reprehenderit veritatis incidunt sit debitis! Velit consequatur non quaerat ipsam sit vitae, adipisci tempora molestiae repellendus quod animi aspernatur fugiat totam cupiditate temporibus esse quisquam cum atque accusamus?</p>
+                                    <p class="text-start">Ratione impedit reiciendis laudantium amet recusandae. Quod nisi ea suscipit sed accusamus quae aliquam! Exercitationem quasi esse nesciunt repellendus sint beatae cumque ullam minus voluptatibus, nisi similique sapiente assumenda quis dolor, sunt earum obcaecati sit in repellat commodi hic aliquam ut iure. Cumque velit veniam voluptate consequuntur veritatis libero quidem.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                    Назва вмісту 4
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p class="text-start">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat doloribus omnis inventore illo accusamus nobis? Nobis tenetur possimus maiores ab vero numquam beatae soluta saepe molestiae nemo pariatur, tempore fuga aperiam quo! Vitae hic atque assumenda est sequi nisi explicabo exercitationem? Adipisci dolore corrupti autem aliquam et eveniet non porro.</p>
+                                    <p class="text-start">Sequi commodi sunt numquam repellat officia quae voluptatem vitae quas ipsum temporibus, dolore exercitationem quibusdam quo, ducimus ea unde id molestias minus reprehenderit veritatis incidunt sit debitis! Velit consequatur non quaerat ipsam sit vitae, adipisci tempora molestiae repellendus quod animi aspernatur fugiat totam cupiditate temporibus esse quisquam cum atque accusamus?</p>
+                                    <p class="text-start">Ratione impedit reiciendis laudantium amet recusandae. Quod nisi ea suscipit sed accusamus quae aliquam! Exercitationem quasi esse nesciunt repellendus sint beatae cumque ullam minus voluptatibus, nisi similique sapiente assumenda quis dolor, sunt earum obcaecati sit in repellat commodi hic aliquam ut iure. Cumque velit veniam voluptate consequuntur veritatis libero quidem.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                                    Назва вмісту 5
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <p class="text-start">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat doloribus omnis inventore illo accusamus nobis? Nobis tenetur possimus maiores ab vero numquam beatae soluta saepe molestiae nemo pariatur, tempore fuga aperiam quo! Vitae hic atque assumenda est sequi nisi explicabo exercitationem? Adipisci dolore corrupti autem aliquam et eveniet non porro.</p>
+                                    <p class="text-start">Sequi commodi sunt numquam repellat officia quae voluptatem vitae quas ipsum temporibus, dolore exercitationem quibusdam quo, ducimus ea unde id molestias minus reprehenderit veritatis incidunt sit debitis! Velit consequatur non quaerat ipsam sit vitae, adipisci tempora molestiae repellendus quod animi aspernatur fugiat totam cupiditate temporibus esse quisquam cum atque accusamus?</p>
+                                    <p class="text-start">Ratione impedit reiciendis laudantium amet recusandae. Quod nisi ea suscipit sed accusamus quae aliquam! Exercitationem quasi esse nesciunt repellendus sint beatae cumque ullam minus voluptatibus, nisi similique sapiente assumenda quis dolor, sunt earum obcaecati sit in repellat commodi hic aliquam ut iure. Cumque velit veniam voluptate consequuntur veritatis libero quidem.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-5">
+                        <h2>Форма з 5 полями та відповідними підписами</h2>
+                    </div>
+                    <div>
+                        <form>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text w-25" id="basic-addon1">Ім'я</span>
+                                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-discribedby="basic-addon1">
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text w-25" id="basic-addon2">Прізвище</span>
+                                <input type="text" class="form-control" placeholder="Familyname" aria-label="Familyname" aria-discribedby="basic-addon2">
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text w-25">Ваше звернення</span>
+                                <textarea class="form-control" aria-label="textarea"></textarea>
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text w-25" id="basic-addon-3">Фото чеку</span>
+                                <input type="file" class="form-control" id="inputGroupFile01">
+                            </div>
+                            <div class="d-flex align-items-start">
+                                <p>Оберіть протрібну опцію</p>
+                            </div>
+                            <div class="d-flex align-items-start">
+                                <div class="form-check form-check-inline mb-3">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="from-check-label" for="inlineRadio1">Опція 1</label>
+                                </div>
+                                <div class="form-check form-check-inline mb-3">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="from-check-label" for="inlineRadio2">Опція 2</label>
+                                </div>
+                                <div class="form-check form-check-inline mb-3">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                    <label class="from-check-label" for="inlineRadio3">Опція 3</label>
+                                </div>
+                                <div class="form-check form-check-inline mb-3">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                                    <label class="from-check-label" for="inlineRadio4">Опція 4</label>
+                                </div>
+                                <div class="form-check form-check-inline mb-3">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+                                    <label class="from-check-label" for="inlineRadio5">Опція 5</label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary mb-5">Відправити</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-3 p-3">
+                    <div class="card text-bg-secondary">
+                        <div class="card-header">Прогноз погоди</div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h6 class="text-start">Київ</h6>
+                                <h6 class="text-end">23:23</h6>
+                            </div>
+                            <div class="d-flex flex-column text-center mt-5 mb-4">
+                                <h6 class="display-4 mb-0 font-weight-bold"> 13°C </h6>
+                                <span class="small" style="color: #dbdde1">Сильний дощ</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="text-start" style="font-size: 1rem;">
+                                    <div><i class="fas fa-wind fa-fw" style="color: #dbdde1;"></i> <span class="ms-1"> 40 km/h
+                                    </span>
+                                    </div>
+                                    <div><i class="fas fa-tint fa-fw" style="color: #dbdde1;"></i> <span class="ms-1"> 84%
+                                    </span></div>
+                                    <div><i class="fas fa-sun fa-fw" style="color: #dbdde1;"></i> <span class="ms-1"> 0.2h
+                                    </span></div>
+                                </div>
+                                    <div class="flex-grow-1"></div>
+                                <div>
+                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/ilu1.webp"
+                                    width="100px">
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="text-bg-secondary p-4">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-12">
+                        &copy; 2026. All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/aa87105c91.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
