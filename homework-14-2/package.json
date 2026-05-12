@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "tailwindcss": "^4.3.0"
+  }
+}
+
+"scripts": {
+  "dev": "rm -rf dist && npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch"
+}
+
