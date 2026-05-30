@@ -18,7 +18,7 @@
     &__title {
         font-size: 14px;
         font-weight: $font-weight-bold;
-        color: #B3B3BA; // Світло-сірий заголовок як у Фігмі
+        color: #B3B3BA;
         text-transform: uppercase;
         letter-spacing: 1px;
         text-align: center;
@@ -27,7 +27,6 @@
 
     &__grid {
         display: grid;
-        // На всіх звичайних розмірах, мобільних та планшетах займає чисті 100% екрану без відступів
         width: 100%; 
         margin-left: auto;
         margin-right: auto;
@@ -35,7 +34,7 @@
         // На мобілці: 1 колонка
         grid-template-columns: 1fr;
 
-        // На 768px (Планшет): Перемикається чітко на 3 колонки
+        // На 768px (Планшет): Перемикається на 3 колонки
         @media (min-width: $bp-tablet) {
             grid-template-columns: repeat(3, 1fr);
         }
@@ -46,10 +45,10 @@
         }
 
         // НА МАКСИМАЛЬНІЙ ШИРИНІ (Desktop XL — понад 1440px): 
-        // Стає ширшим за контент на 120px (наприклад, 1320px контенту + 120px = 1440px)
+        // Стає ширшим за контент на 120px
         @media (min-width: $bp-desktop) {
             max-width: 1440px; 
-            border-radius: 12px; // Красиво заокруглюємо кути всього гріда
+            border-radius: 12px;
             overflow: hidden;
         }
     }
@@ -73,10 +72,10 @@
             cursor: pointer;
             z-index: 2;
             box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
-            transform: scale(1.02); // Легкий інтерактив всієї плашки
+            transform: scale(1.02);
         }
 
-        // ІНДИКАТОРНІ КОЛЬОРИ ДЛЯ КОЖНОГО БРЕНДУ (Заміни кольори на точні з макета)
+        // ІНДИКАТОРНІ КОЛЬОРИ ДЛЯ КОЖНОГО БРЕНДУ
         &--hillel {
             background-color: #1C4280;
         }

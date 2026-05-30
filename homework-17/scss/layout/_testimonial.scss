@@ -2,7 +2,7 @@
 @use '../abstracts/mixins' as *;
 
 // =============================================================================
-// TESTIMONIAL SECTION (Гнучке розширення на великих екранах)
+// TESTIMONIAL SECTION
 // =============================================================================
 
 .testimonial {
@@ -24,7 +24,7 @@
         margin-left: auto;
         margin-right: auto;
 
-        // МОБЫЛКА (від 375px)
+        // МОБІЛКА (від 375px)
 
         @media (min-width: $bp-mobile) {
             max-width: calc(100% - 60px);
@@ -44,33 +44,33 @@
         @media (min-width: $bp-tablet-l) { 
             flex-direction: row;
             align-items: stretch;
-            max-width: 904px; // На 1024px тримаємо чіткі 904px як у Фігмі
+            max-width: 904px;
             padding-left: 0;
             padding-right: 0;
         }
 
         // ЗВИЧАЙНИЙ ДЕСКТОП (від 1200px)
         @media (min-width: 1200px) {
-            max-width: 1080px; // Блок починає рости вшир
+            max-width: 1080px;
         }
 
         // ВЕЛИКІ МОНІТОРИ XL (від 1440px і більше)
         @media (min-width: $bp-desktop) {
-            max-width: $container-max-width; // Повністю розширюється до меж твого головного контейнера!
+            max-width: $container-max-width;
         }
     }
 
-    // ЛІВА ЧАСТИНА: Фотографія
+    // ЛІВА ЧАСТИНА: Фото
     &__image {
         width: 100%;
         
         @media (min-width: $bp-tablet-l) {
-            width: 35%; // Задаємо відносні відсотки замість фіксованих пікселів
+            width: 35%;
             min-width: 320px;
         }
 
         @media (min-width: $bp-desktop) {
-            width: 40%; // Трохи більше простору для фото на великих моніторах
+            width: 40%;
         }
 
         picture, img {
@@ -90,17 +90,17 @@
         justify-content: center;
 
         @media (min-width: $bp-tablet-l) {
-            width: 65%; // Займає решту простору
+            width: 65%;
             padding: 40px 50px;
         }
 
         @media (min-width: $bp-desktop) {
             width: 60%;
-            padding: 60px 80px; // Додаємо повітря та простору на екранах XL
+            padding: 60px 80px;
         }
     }
 
-    // Надзаголовок "КОМАНДА >"
+    // Надзаголовок "КОМАНДА"
     &__badge {
         font-size: 14px;
         font-weight: $font-weight-bold;
@@ -135,7 +135,7 @@
         }
 
         @media (min-width: $bp-desktop) {
-            font-size: 38px; // На гігантських екранах літери стають великими та солідними
+            font-size: 38px;
         }
     }
 
@@ -168,8 +168,6 @@
         width: 100%;
         padding-left: 0;
         padding-right: 0;
-        
-        // Крапки завжди тримаються центрування, незалежно від ширини картки вище
         margin-left: auto;
         margin-right: auto;
     }

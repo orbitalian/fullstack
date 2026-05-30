@@ -2,7 +2,7 @@
 @use '../abstracts/mixins' as *;
 
 // =============================================================================
-// SERVICES SECTION (Виправлено: тепер на темному градієнті)
+// SERVICES SECTION
 // =============================================================================
 
 .services {
@@ -101,14 +101,14 @@
         transition: color $transition-base;
 
         &:hover {
-            color: $color-accent; // Ефектне підсвічування при наведенні
+            color: $color-accent;
         }
     }
 
     &__text {
         font-size: $font-size-base;
         line-height: 1.5;
-        color: #fff; // ТЕПЕР БІЛИЙ
-        opacity: 0.8; // Легка прозорість для м'якості тексту
+        color: #fff;
+        opacity: 0.8;
     }
 }

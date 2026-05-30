@@ -1,10 +1,12 @@
-// =============================================================================
-// TYPOGRAPHY
-// Типографіка на основі шкали з Фігми (Montserrat)
-// =============================================================================
-
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
+
+
+// =============================================================================
+// TYPOGRAPHY
+// =============================================================================
+
+
 
 // -----------------------------------------------------------------------------
 // GOOGLE FONTS IMPORT
@@ -21,7 +23,7 @@ h1, .h1 {
   @include heading-style($font-size-hero);
   color: $color-main;
 
-  // Варіант з градієнтом — як у Hero на макеті
+  
   &.hero-title {
     @include gradient-text($gradient-red);
   }
@@ -41,7 +43,7 @@ h3, .h3 {
   color: $color-main;
 }
 
-// H3 Caps — варіант з Фігми (uppercase + letter-spacing)
+
 h3.caps, .h3-caps {
   @include heading-style($font-size-h3);
   text-transform: uppercase;
@@ -65,7 +67,6 @@ p, .paragraph {
   line-height: $line-height-base;
   color: $color-main-soft;
 
-  // відступ між параграфами
   & + p {
     margin-top: $spacing-md;
   }

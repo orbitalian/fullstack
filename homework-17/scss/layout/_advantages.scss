@@ -7,7 +7,7 @@
 
 .advantages {
     position: relative;
-    background-color: transparent; // Прозора, під нею плавно продовжується градієнт
+    background-color: transparent; 
     z-index: 2;
     padding-top: 60px;
     padding-bottom: 60px;
@@ -48,11 +48,8 @@
         }
 
         @media (max-width: $bp-tablet){
-            //width: calc(100% + (#{$container-padding-mobile} *2));
-            //margin-left: -$container-padding-mobile;
             margin-left: -60px;
             margin-right: -$container-padding-mobile;
-            //padding-left: $container-padding-mobile;
             padding-left: 60px;
             padding-right: $container-padding-mobile;
         }
@@ -70,11 +67,11 @@
         }
     }
 
-    // Самі кнопки-таби
+    // Кнопки-таби
     &__tab {
         font-size: 20px;
         font-weight: $font-weight-bold;
-        color: $color-grey-text; // За замовчуванням тьмяні
+        color: $color-grey-text; 
         text-align: left;
         transition: color $transition-base;
         white-space: nowrap;
@@ -89,10 +86,10 @@
         }
 
         &:hover {
-            color: $color-accent; // При наведенні стають рожево-червоними
+            color: $color-accent; 
         }
 
-        // АКТИВНИЙ ТАБ: Горить яскравим градієнтом або акцентним кольором
+        // АКТИВНИЙ ТАБ
         &--active {
             background: $gradient-red-text;
             cursor: default;
@@ -107,11 +104,10 @@
             @media (min-width: $bp-tablet-l) {
                 position: relative;
                 
-                // Якщо за макетом лінія міняє колір навпроти активного табу:
                 &::after {
                     content: "";
                     position: absolute;
-                    right: -64px; // Зсуваємо чітко на нашу бордер-лінію
+                    right: -64px;
                     top: 0;
                     width: 4px;
                     height: 100%;
@@ -151,6 +147,6 @@
         font-size: $font-size-base;
         line-height: 1.6;
         color: #fff;
-        opacity: 0.8; // Робимо текст читабельним, але не занадто яскравим
+        opacity: 0.8;
     }
 }

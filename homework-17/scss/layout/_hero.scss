@@ -87,7 +87,6 @@
         font-weight: $font-weight-bold;
         color: #fff;
         line-height: 1.2;
-        //max-width: 800px;
         text-transform: lowercase;
 
         @media (min-width: $bp-tablet) {
@@ -118,8 +117,8 @@
         }
 
         &:hover {
-            // Зберігаємо translateX(-50%), щоб кнопка не тікала вбік, 
-            // і додаємо translateY(5px) для красивого руху вниз
+            // translateX(-50%), щоб кнопка не тікала вбік 
+            // translateY(5px) для красивого руху вниз
             transform: translateX(-50%) translateY(5px); 
             
             svg {

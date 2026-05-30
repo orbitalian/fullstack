@@ -49,25 +49,25 @@
         }
     }
 
-    // СІТКА ДЛЯ КАРТОК (Виправлено: третя картка залишається ВЕРТИКАЛЬНОЮ)
+    // СІТКА ДЛЯ КАРТОК
     &__grid {
         display: grid;
         grid-template-columns: 1fr; // 1. Мобільний — 1 колонка
         gap: $spacing-lg;
 
-        // 2. ПЛАНШЕТ (від 768px до 1023px) — Картка розширюється на 2 колонки, але форма вертикальна
+        // 2. ПЛАНШЕТ (від 768px до 1023px) — Картка розширюється на 2 колонки
         @media (min-width: $bp-tablet) and (max-width: 1023px) {
             grid-template-columns: repeat(2, 1fr);
             gap: 30px;
 
             .post-card:last-child {
-                grid-column: 1 / span 2; // Розтягується на всю ширину гріда (наприклад, твої 648px)
-                flex-direction: column;  // ЗАЛИШАЄТЬСЯ ВЕРТИКАЛЬНОЮ (як на макеті)
+                grid-column: 1 / span 2; // Розтягується на всю ширину гріда
+                flex-direction: column;  // ЗАЛИШАЄТЬСЯ ВЕРТИКАЛЬНОЮ
                 
-                // Налаштовуємо пропорції картинки для широкої вертикальної картки
+                // Пропорції картинки для широкої вертикальної картки
                 .post-card__image-wrapper {
                     width: 100%;
-                    height: 240px; // Картинка зверху, як на скріншоті
+                    height: 240px;
                 }
 
                 .post-card__body {
@@ -102,7 +102,7 @@
         cursor: pointer;
 
         .post-card__title a {
-            color: $color-accent; // При ховері на картку заголовок стає червоно-рожевим
+            color: $color-accent;
         }
     }
 
@@ -133,7 +133,7 @@
         margin-bottom: 14px;
 
         a {
-            color: $color-link; // Світло-синій заголовок з макета
+            color: $color-link;
             transition: color $transition-base;
             text-decoration: none; 
         }
@@ -148,7 +148,7 @@
         letter-spacing: 1px;
         margin-bottom: $spacing-md;
         padding-bottom: $spacing-sm;
-        border-bottom: 4px solid #E6E6F0; // Твоя тонка світла лінія під датою
+        border-bottom: 4px solid #E6E6F0;
     }
 
     &__text {
