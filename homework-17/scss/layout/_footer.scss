@@ -1,0 +1,206 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// =============================================================================
+// FOOTER STYLES (Оновлено: колонка для mobile, ряд для решти екранів)
+// =============================================================================
+
+.footer {
+    background-color: $color-grey-bg;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: 2px solid #E6E6F0;
+
+    &__container {
+        display: grid;
+        width: 100%;
+        
+        // 1. МОБІЛЬНА ВЕРСІЯ (По дефолту) — Охайний стовпчик по центру, копірайт в самому низу
+        grid-template-areas: 
+            "address"
+            "contacts"
+            "copyright";
+        row-gap: 30px;
+        justify-items: center; // Центруємо на мобільних
+        text-align: center;
+
+        // 2. ДЛЯ ВСІХ ІНШИХ ЕКРАНІВ (Планшети та десктопи від 768px і більше)
+        @media (min-width: 768px) {
+            grid-template-columns: 1fr auto; // Ліва частина гнучка, копірайт праворуч за контентом
+            grid-template-areas: 
+                "address copyright"   // Перший рядок: адреса зліва, копірайт справа
+                "contacts .";         // Другий рядок: контакти зліва, справа порожньо
+            row-gap: 21px;
+            column-gap: $spacing-md;
+            justify-items: start; // ЗАЛІЗОБЕТОННО ВИРІВНЮЄМО ВСЕ ПО ЛІВОМУ КРАЮ!
+            text-align: left;
+        }
+    }
+
+    // Прив'язуємо блок адреси до своєї області
+    &__row {
+        grid-area: address;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            align-items: center;
+            gap: 0;
+            width: auto;
+        }
+    }
+
+    &__address {
+        font-size: 16px;
+        color: $color-main;
+        font-style: normal;
+    }
+
+    &__map-link {
+        font-size: 12px;
+        font-weight: $font-weight-bold;
+        color: $color-link;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-decoration: none;
+
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: center;
+
+            &::before {
+                content: "";
+                display: inline-block;
+                width: 4px;
+                height: 4px;
+                background-color: #B3B3BA;
+                border-radius: 50%;
+                margin-left: 10px;  
+                margin-right: 10px; 
+            }
+        }
+
+        &:hover {
+            color: $color-accent;
+        }
+    }
+
+    // Прив'язуємо блок контактів до своєї області (Завжди зліва під адресою)
+    &__contacts-block {
+        grid-area: contacts;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            align-items: center;
+            gap: 0;
+            width: auto;
+        }
+    }
+
+    &__facebook {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        overflow: hidden;
+        flex-shrink: 0;
+        transition: transform $transition-base;
+
+        svg {
+            width: 100%;  
+            height: 100%;
+            object-fit: cover;
+            fill: $color-link;
+            transition: fill $transition-base;
+        }
+
+        &:hover {
+            transform: scale(1.05);
+            svg {
+                fill: $color-accent;
+            } 
+        }
+    }
+
+    &__phone {
+        font-size: 16px;
+        font-weight: $font-weight-bold;
+        color: #46466E;
+        text-decoration: none;
+        white-space: nowrap; 
+
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: center;
+
+            &::before {
+                content: "";
+                display: inline-block;
+                width: 4px;
+                height: 4px;
+                background-color: #B3B3BA;
+                border-radius: 50%;
+                margin-left: 10px;  
+                margin-right: 10px; 
+            }
+        }
+
+        &:hover {
+            color: $color-link;
+        }
+    }
+
+    &__email {
+        font-size: 16px;
+        font-weight: $font-weight-bold;
+        color: $color-link;
+        text-decoration: none;
+        white-space: nowrap;
+
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: center;
+
+            &::before {
+                content: "";
+                display: inline-block;
+                width: 4px;
+                height: 4px;
+                background-color: #B3B3BA;
+                border-radius: 50%;
+                margin-left: 10px;  
+                margin-right: 10px; 
+            }
+        }
+
+        &:hover {
+            color: $color-accent;
+        }
+    }
+
+    // Прив'язуємо копірайт до своєї області (На мобільці внизу, на десктопі — у верхньому правому кутку)
+    &__copy {
+        grid-area: copyright;
+        font-size: 16px;
+        color: #B3B3BA;
+        font-weight: $font-weight-regular;
+        white-space: nowrap;
+        width: 100%;
+
+        @media (min-width: 768px) {
+            text-align: right;
+            width: auto;
+        }
+    }
+}

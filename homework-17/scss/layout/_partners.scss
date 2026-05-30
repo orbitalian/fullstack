@@ -1,0 +1,129 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// =============================================================================
+// PARTNERS SECTION (CUSTOM GRID LAYOUT)
+// =============================================================================
+
+.partners {
+    background-color: #fff;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @media (min-width: $bp-tablet-l) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    &__title {
+        font-size: 14px;
+        font-weight: $font-weight-bold;
+        color: #B3B3BA; // Світло-сірий заголовок як у Фігмі
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    &__grid {
+        display: grid;
+        // На всіх звичайних розмірах, мобільних та планшетах займає чисті 100% екрану без відступів
+        width: 100%; 
+        margin-left: auto;
+        margin-right: auto;
+        
+        // На мобілці: 1 колонка
+        grid-template-columns: 1fr;
+
+        // На 768px (Планшет): Перемикається чітко на 3 колонки
+        @media (min-width: $bp-tablet) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        // На десктопі від 1024px: 4 колонки
+        @media (min-width: $bp-tablet-l) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        // НА МАКСИМАЛЬНІЙ ШИРИНІ (Desktop XL — понад 1440px): 
+        // Стає ширшим за контент на 120px (наприклад, 1320px контенту + 120px = 1440px)
+        @media (min-width: $bp-desktop) {
+            max-width: 1440px; 
+            border-radius: 12px; // Красиво заокруглюємо кути всього гріда
+            overflow: hidden;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 120px; 
+        padding: $spacing-md;
+        transition: transform $transition-base, box-shadow $transition-base;
+
+        img {
+            max-width: 180px; 
+            width: 70%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        &:hover {
+            cursor: pointer;
+            z-index: 2;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+            transform: scale(1.02); // Легкий інтерактив всієї плашки
+        }
+
+        // ІНДИКАТОРНІ КОЛЬОРИ ДЛЯ КОЖНОГО БРЕНДУ (Заміни кольори на точні з макета)
+        &--hillel {
+            background-color: #1C4280;
+        }
+        
+        &--wannabiz {
+            background-color: #143646;
+        }
+
+        &--tapgerine {
+            background-color: #F48B30; 
+        }
+
+        &--3dlook {
+            background-color: #9E4DC3; 
+        }
+
+        &--orangear {
+            background-color: #FD9339; 
+        }
+
+        &--adtelligent {
+            background-color: #E2E2E4; 
+        }
+
+        &--clickky {
+            background-color: #C71C36; 
+        }
+
+        &--ecoleasing {
+            background-color: #DCF3F9; 
+        }
+
+        &--infratek {
+            background-color: #EAEAEA;
+        }
+
+        &--citypark {
+            background-color: #282240;
+        }
+
+        &--artprint {
+            background-color: #1D4568;
+        }
+
+        &--ultimatecard {
+            background-color: #000000;
+        }
+    
+    }
+}

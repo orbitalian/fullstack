@@ -1,0 +1,156 @@
+// =============================================================================
+// TYPOGRAPHY
+// Типографіка на основі шкали з Фігми (Montserrat)
+// =============================================================================
+
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// -----------------------------------------------------------------------------
+// GOOGLE FONTS IMPORT
+// -----------------------------------------------------------------------------
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+
+// -----------------------------------------------------------------------------
+// ЗАГОЛОВКИ
+// -----------------------------------------------------------------------------
+
+h1, .h1 {
+  @include heading-style($font-size-hero);
+  color: $color-main;
+
+  // Варіант з градієнтом — як у Hero на макеті
+  &.hero-title {
+    @include gradient-text($gradient-red);
+  }
+}
+
+h2, .h2 {
+  @include heading-style($font-size-h2);
+  color: $color-main;
+
+  @include tablet {
+    font-size: calc(#{$font-size-h2} * 0.8);
+  }
+}
+
+h3, .h3 {
+  @include heading-style($font-size-h3);
+  color: $color-main;
+}
+
+// H3 Caps — варіант з Фігми (uppercase + letter-spacing)
+h3.caps, .h3-caps {
+  @include heading-style($font-size-h3);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $color-main;
+}
+
+h4, .h4 {
+  @include heading-style($font-size-h4, $font-weight-bold);
+  color: $color-main;
+}
+
+
+// -----------------------------------------------------------------------------
+// ПАРАГРАФ
+// -----------------------------------------------------------------------------
+
+p, .paragraph {
+  font-size: $font-size-base;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-base;
+  color: $color-main-soft;
+
+  // відступ між параграфами
+  & + p {
+    margin-top: $spacing-md;
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// СПИСКИ (контентні — у статтях, описах)
+// -----------------------------------------------------------------------------
+
+.content {
+  ul, ol {
+    margin-top: $spacing-md;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+  }
+
+  ul li {
+    position: relative;
+    padding-left: $spacing-lg;
+
+    &::before {
+      content: '•';
+      position: absolute;
+      left: $spacing-sm;
+      color: $color-accent;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  ol {
+    counter-reset: list-counter;
+
+    li {
+      position: relative;
+      padding-left: $spacing-lg;
+      counter-increment: list-counter;
+
+      &::before {
+        content: counter(list-counter) '.';
+        position: absolute;
+        left: 0;
+        color: $color-accent;
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// ПОСИЛАННЯ
+// -----------------------------------------------------------------------------
+
+.link {
+  color: $color-active;
+  text-decoration: none;
+  font-weight: $font-weight-regular;
+  transition: color $transition-base;
+
+  &:hover {
+    color: $color-active-hover;
+    text-decoration: underline;
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// ДОПОМІЖНІ УТИЛІТИ
+// -----------------------------------------------------------------------------
+
+.text-accent    { color: $color-accent; }
+.text-active    { color: $color-active; }
+.text-muted     { color: $color-grey-text; }
+.text-main      { color: $color-main; }
+
+.text-bold      { font-weight: $font-weight-bold; }
+.text-regular   { font-weight: $font-weight-regular; }
+
+.text-uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.text-center    { text-align: center; }
+.text-left      { text-align: left; }
+.text-right     { text-align: right; }

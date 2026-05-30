@@ -1,0 +1,17 @@
+@use './abstracts/variables';
+@use './abstracts/mixins';
+@use './abstracts/index';
+@use './base/reset';
+@use './base/typography';
+@use './base/base';
+@use './layout/header';
+@use './layout/hero';
+@use './layout/advantages';
+@use './layout/services';
+@use './layout/testimonial';
+@use './layout/partners';
+@use './layout/publication';
+@use './layout/footer';
+// далі всі стилі із Layout
+// далій йде папка Components
+// останньою іде Pages 

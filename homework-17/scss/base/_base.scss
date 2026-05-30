@@ -1,0 +1,81 @@
+// =============================================================================
+// BASE
+// Глобальні базові стилі елементів
+// =============================================================================
+
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+
+body {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    font-weight: $font-weight-regular;
+    color: $color-main;
+    //background-color: $color-grey-bg;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: $color-link;
+    text-decoration: none;
+    transition: $transition-base;
+
+    &:hover {
+        color: $color-link-hover;
+    }
+}
+
+button {
+    font-family: inherit;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+// -----------------------------------------------------------------------------
+// ГОЛОВНИЙ КОНТЕЙНЕР (Адаптив за твоїми брейкпоінтами)
+// -----------------------------------------------------------------------------
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    // Desktop XL (> 1440px)
+    max-width: $container-max-width; 
+
+    // Desktop (≤ 1440px)
+    @media (max-width: $bp-desktop) {
+        max-width: $container-max-width-desktop;
+    }
+
+    // Tablet L (≤ 1024px)
+    @media (max-width: $bp-tablet-l) {
+        max-width: none;
+        padding-left: $container-padding-tablet-l;
+        padding-right: $container-padding-tablet-l;
+    }
+
+    // Tablet (≤ 768px)
+    @media (max-width: $bp-tablet) {
+        padding-left: $container-padding-tablet;
+        padding-right: $container-padding-tablet;
+    }
+
+    // Mobile (≤ 375px)
+    @media (max-width: $bp-mobile) {
+        padding-left: $container-padding-mobile;
+        padding-right: $container-padding-mobile;
+    }
+}

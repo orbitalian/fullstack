@@ -1,0 +1,196 @@
+// =============================================================================
+// MIXINS
+// =============================================================================
+
+@use 'variables' as *;
+
+
+// -----------------------------------------------------------------------------
+// МЕДІАЗАПИТИ
+// Відповідають макетам у Фігмі
+// -----------------------------------------------------------------------------
+
+// ≤ 375px  — Mobile
+@mixin mobile {
+  @media (max-width: #{$bp-mobile}) {
+    @content;
+  }
+}
+
+// ≤ 768px  — Tablet
+@mixin tablet {
+  @media (max-width: #{$bp-tablet}) {
+    @content;
+  }
+}
+
+// ≤ 1024px — Tablet L
+@mixin tablet-l {
+  @media (max-width: #{$bp-tablet-l}) {
+    @content;
+  }
+}
+
+// ≤ 1440px — Desktop
+@mixin desktop {
+  @media (max-width: #{$bp-desktop}) {
+    @content;
+  }
+}
+
+// між двома значеннями
+@mixin between($min, $max) {
+  @media (min-width: #{$min}) and (max-width: #{$max}) {
+    @content;
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// КОНТЕЙНЕР
+//
+// Логіка:
+//   > 1440px  →  max-width: 1360px, margin: auto  (плавно росте, стеля 1360px)
+//   ≤ 1440px  →  max-width: 1080px, margin: auto  (плавно росте, стеля 1080px)
+//   ≤ 1024px  →  padding: 60px  (904px контент при 1024px вьюпорті)
+//   ≤  768px  →  padding: 60px  (648px контент при 768px вьюпорті)
+//   ≤  375px  →  padding: 30px  (315px контент при 375px вьюпорті)
+// -----------------------------------------------------------------------------
+
+@mixin container {
+  width: 100%;
+  max-width: $container-max-width;
+  margin-inline: auto;
+
+  @include desktop {
+    max-width: $container-max-width-desktop;
+  }
+
+  @include tablet-l {
+    max-width: none;
+    padding-inline: $container-padding-tablet-l;
+  }
+
+  @include tablet {
+    padding-inline: $container-padding-tablet;
+  }
+
+  @include mobile {
+    padding-inline: $container-padding-mobile;
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// FLEX HELPERS
+// -----------------------------------------------------------------------------
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+
+// -----------------------------------------------------------------------------
+// ТИПОГРАФІКА
+// -----------------------------------------------------------------------------
+
+@mixin heading-style($size, $weight: $font-weight-bold) {
+  font-family: $font-family-base;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height-heading;
+}
+
+// Gradient text (для Hero заголовків)
+@mixin gradient-text($gradient) {
+  background: $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+// -----------------------------------------------------------------------------
+// КНОПКА — базові стилі
+// -----------------------------------------------------------------------------
+
+@mixin btn-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-sm $spacing-xl;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-bold;
+  border: none;
+  border-radius: $border-radius-pill;
+  cursor: pointer;
+  transition: all $transition-base;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+
+// -----------------------------------------------------------------------------
+// КАРТОЧКА
+// -----------------------------------------------------------------------------
+
+@mixin card {
+  background: #fff;
+  border-radius: $border-radius-lg;
+  box-shadow: $box-shadow-card;
+  transition: box-shadow $transition-base, transform $transition-base;
+
+  &:hover {
+    box-shadow: $box-shadow-hover;
+    transform: translateY(-2px);
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// TRUNCATE ТЕКСТ
+// -----------------------------------------------------------------------------
+
+@mixin truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin line-clamp($lines) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+// -----------------------------------------------------------------------------
+// ВІЗУАЛЬНО ПРИХОВАНИЙ (accessibility)
+// -----------------------------------------------------------------------------
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

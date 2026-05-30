@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hlegal - Law Company</title>
+    <link rel="stylesheet" href="./css/main.css"> 
+
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Scripts -->
+    <script src="./js/main.js" defer></script>
+
+</head>
+<body>
+    <div class="intro-wrapper">
+
+        <!-- ШАПКА САЙТУ -->
+        <header class="header">
+            <div class="container header__container">
+                <a href="index.html" class="header__logo">
+                    <img src="./img/Logo.svg" alt="Hlegal Law Company">
+                </a>
+                <div class="header__contacts">
+                <div class="header__lang">
+                    <span class="header__lang-item">УК</span>
+                    <span class="header__lang-item">PL</span>
+                    <span class="header__lang-item header__lang-item--active">EN</span>
+                </div>
+                <span class="header__address">Kyiv, Mechnykov St, 14/1</span>
+                <a href="tel:0800211927" class="header__phone">0800 211 927</a>
+                <a href="https://facebook.com" class="header__facebook" target="_blank" rel="noopener">
+                    <svg class="header__facebook-icon" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                </a>
+            </div>
+                <nav class="header__nav nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="about.html" class="nav__link">about us</a></li>
+                        <li class="nav__item"><a href="services.html" class="nav__link">services</a></li>
+                        <li class="nav__item"><a href="team.html" class="nav__link">team</a></li>
+                        <li class="nav__item"><a href="publications.html" class="nav__link">publications</a></li>
+                        <li class="nav__item"><a href="contact.html" class="nav__link">contact</a></li>
+                    </ul>
+                </nav>
+
+                <button class="header__burger burger" aria-label="Open menu">
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                </button>
+
+            </div>
+        </header>
+
+        <main>
+        <!--ПЕРШИЙ ЕКРАН -->
+        <section class="hero">
+            <div class="container hero__container">
+            <h1 class="hero__title">you legal solutions provider</h1>
+            </div>
+                <a href="#about" class="hero__scroll-btn" aria-label="Scroll down">
+                <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://w3.org">
+                    <circle cx="21" cy="21" r="20" stroke="white" stroke-width="2" opacity="0.5"/>
+                    <path d="M15 19L21 25L27 19" stroke="white" stroke-width="2"/>
+                </svg>
+                </a>
+        </section>
+
+
+        <!-- БЛОК ПЕРЕВАГ ТА ТАБІВ -->
+        <section id="about" class="advantages">
+            <div class="container advantages__container">
+            <!-- Ліва частина (Таби/Перемикачі) -->
+            <div class="advantages__tabs">
+                <button class="advantages__tab advantages__tab--active">Consistent</button>
+                <button class="advantages__tab">Customer oriented</button>
+                <button class="advantages__tab">Innovative</button>
+                <button class="advantages__tab">Business oriented</button>
+            </div>
+            <!-- Права частина (Контент) -->
+            <div class="advantages__content">
+                <h2 class="advantages__title">We turn the idea of legal services</h2>
+                <p class="advantages__text">
+                Consolidating many years of experience and practice, the company's lawyers accompany complex projects and solve a number of important decisions for the industry. Many of them form the practice of applying the law of the court in Ukraine.
+                </p>
+            </div>
+            </div>
+        </section>
+
+        <!-- БЛОК ПОСЛУГ (КАРТКИ) -->
+        <section class="services">
+            <div class="container">
+                <span class="services__subtitle">Services &gt;</span>
+                <h2 class="services__main-title">What can we do better than others?</h2>
+                <div class="services__grid">
+                    <!-- Картка 1 -->
+                    <article class="service-card">
+                        <div class="service-card__icon"><img src="./img/e-commerce_icon.svg" alt=""></div>
+                        <h3 class="service-card__title">IT and e-commerce</h3>
+                        <p class="service-card__text">An endless stream of contracts, tax issues, labor relations, corporate papers - we legal debris risk from doing business...</p>
+                    </article>
+                    <!-- Картка 2 -->
+                    <article class="service-card">
+                        <div class="service-card__icon"><img src="./img/comprehensive_icon.svg" alt=""></div>
+                        <h3 class="service-card__title">Comprehensive daily legal support</h3>
+                        <p class="service-card__text">In addition, over time, the work will become the archetype and is interesting for a full-time lawyer, and our community...</p>
+                    </article>
+                    <!-- Картка 3 -->
+                    <article class="service-card">
+                        <div class="service-card__icon"><img src="./img/structuring_icon.svg" alt=""></div>
+                        <h3 class="service-card__title">Structuring corporate relationships</h3>
+                        <p class="service-card__text">Instead of choosing local services, we will have a look at a whole team that fits into the daily life of your company...</p>
+                    </article>
+                    <!-- Картка 4 -->
+                    <article class="service-card">
+                        <div class="service-card__icon"><img src="./img/building_icon.svg" alt=""></div>
+                        <h3 class="service-card__title">Building investment relations</h3>
+                        <p class="service-card__text">Once a point, or even for months, you have your own "legal team" around you in the community, not individual...</p>
+                    </article>
+                    <!-- Картка 5 -->
+                    <article class="service-card">
+                        <div class="service-card__icon"><img src="./img/protection_icon.svg" alt=""></div>
+                        <h3 class="service-card__title">Protection of business, intellectual property</h3>
+                        <p class="service-card__text">You will be able to center on more strategic tasks, relying on our full daily legal support...</p>
+                    </article>
+                    <!-- Картка 6 -->
+                    <article class="service-card">
+                        <div class="service-card__icon"><img src="./img/judicial_icon.svg" alt=""></div>
+                        <h3 class="service-card__title">Judicial representation</h3>
+                        <p class="service-card__text">Is it small, medium-sized company or market leader? An internal lawyer or a law company - do you have your own business partner?</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </div> 
+    
+    <div class="intro-divider"></div>
+
+        <!-- БЛОК КОМАНДИ (СЛАЙДЕР/ЦИТАТА) -->
+        <section class="testimonial">
+            <div class="container testimonial__container">
+
+                <div class="testimonial__image">
+                    <picture>
+                        <!-- Desktop XL  -->
+                        <source media="(min-width: 1441px)" srcset="./img/testimonial_xl.jpg">
+
+                        <!-- Desktop  -->
+                        <source media="(min-width: 1025px)" srcset="./img/testimonial.jpg">
+
+                        <!-- Tablet L -->
+                        <source media="(min-width: 769px)" srcset="./img/testimonial_tablet_xl.jpg">
+
+                        <!-- Tablet -->
+                        <source media="(min-width: 376px)" srcset="./img/testimonial_tablet.jpg">
+
+                        <!-- Mobile  -->
+                        <img src="./img/testimonial_mob.jpg" alt="Олександр Александровський">
+                    </picture>
+                </div>
+                <div class="testimonial__content">
+                    <span class="testimonial__badge">Команда&gt;</span>
+                    <blockquote class="testimonial__quote">
+                        Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.
+                    </blockquote>
+                    <cite class="testimonial__author">Олександр Олександровський <span class="testimonial__role">Керуючий партнер</span></cite>
+                </div>
+            </div>
+            
+            <!-- КЛАС-МОДИФІКАТОР -->
+            <div class="container testimonial__container testimonial__container--dots">
+                <div class="testimonial__dots">
+                    <button class="testimonial__dot testimonial__dot--active" aria-label="Slide 1"></button>
+                    <button class="testimonial__dot" aria-label="Slide 2"></button>
+                    <button class="testimonial__dot" aria-label="Slide 3"></button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- БЛОК ПАРТНЕРІВ (ЛОГОТИПИ) -->
+        <section class="partners">
+            <div class="container">
+                <h3 class="partners__title">They already trust us</h3>
+            </div>
+                <div class="partners__grid">
+                    <div class="partners__item partners__item--hillel"><img src="./img/logos/hillel_logo.png" alt="Hillel"></div> 
+                    <div class="partners__item partners__item--wannabiz"><img src="./img/logos/wannabiz_logo.png" alt="WannaBiz"></div>
+                    <div class="partners__item partners__item--tapgerine"><img src="./img/logos/tapgerine_logo.png" alt="Tapgerine"></div>
+                    <div class="partners__item partners__item--3dlook"><img src="./img/logos/3dlook_logo.png" alt="3DLook"></div>
+                    <div class="partners__item partners__item--orangear"><img src="./img/logos/orangear_logo.png" alt="OrangeEar"></div>
+                    <div class="partners__item partners__item--adtelligent"><img src="./img/logos/adtelligent_logo.png" alt="Adtelligent"></div>
+                    <div class="partners__item partners__item--clickky"><img src="./img/logos/clickky_logo.png" alt="Clickky"></div>
+                    <div class="partners__item partners__item--ecoleasing"><img src="./img/logos/ecoleasing_logo.png" alt="Eco Leasing"></div>
+                    <div class="partners__item partners__item--infratek"><img src="./img/logos/infratek_logo.png" alt="Infra Tek"></div>
+                    <div class="partners__item partners__item--citypark"><img src="./img/logos/citypark_logo.png" alt="City Park"></div>
+                    <div class="partners__item partners__item--artprint"><img src="./img/logos/artprint_logo.png" alt="Art Print"></div>
+                    <div class="partners__item partners__item--ultimatecard"><img src="./img/logos/ultimatecard_logo.png" alt="Ultimate Card"></div>
+                </div>
+            
+        </section>
+
+        <!-- БЛОК ПУБЛІКАЦІЙ (БЛОГ) -->
+        <section class="publications">
+            <div class="container">
+                <span class="publications__subtitle">Publications&gt;</span>
+                <h2 class="publications__main-title">We have something to tell</h2>
+                
+                <div class="publications__grid">
+                    
+                    <!-- Пост 1 -->
+                    <article class="post-card">
+                        <div class="post-card__image-wrapper">
+                            <picture>
+                                <!-- Екран 1: Великі монітори XL (від 1441px) -->
+                                <source media="(min-width: 1441px)" srcset="./img/pubs/xl_post-1.jpg">
+                                <!-- Екран 2: Звичайний десктоп (від 1025px до 1440px) -->
+                                <source media="(min-width: 1025px)" srcset="./img/pubs/post-1.jpg">
+                                <!-- Екран 3: Планшет L / Твій крок на 1024px (від 769px до 1024px) -->
+                                <source media="(min-width: 769px)" srcset="./img/pubs/tablet-l_post-1.jpg">
+                                <!-- Екран 4: Стандартний планшет (від 376px до 768px) -->
+                                <source media="(min-width: 376px)" srcset="./img/pubs/tablet_post-1.jpg">
+                                <!-- Екран 5: Мобільний (до 375px включно) — дефолтне фото в тегу img -->
+                                <img src="./img/pubs/mobile_post-1.jpg" alt="Equity associate" class="post-card__image">
+                            </picture>
+                        </div>
+                        <div class="post-card__body">
+                            <h3 class="post-card__title"><a href="#">Equity associate</a></h3>
+                            <span class="post-card__date">April 22</span>
+                            <p class="post-card__text">I'm a native speaker. Here's a summary of a machine. How it happened, before when everyone runs to search for...</p>
+                        </div>
+                    </article>
+
+                    <!-- Пост 2 -->
+                    <article class="post-card">
+                        <div class="post-card__image-wrapper">
+                            <picture>
+                                <!-- Екран 1: Великі монітори XL (від 1441px) -->
+                                <source media="(min-width: 1441px)" srcset="./img/pubs/xl_post-2.jpg">
+                                <!-- Екран 2: Звичайний десктоп (від 1025px до 1440px) -->
+                                <source media="(min-width: 1025px)" srcset="./img/pubs/post-2.jpg">
+                                <!-- Екран 3: Планшет L / Твій крок на 1024px (від 769px до 1024px) -->
+                                <source media="(min-width: 769px)" srcset="./img/pubs/tablet-l_post-2.jpg">
+                                <!-- Екран 4: Стандартний планшет (від 376px до 768px) -->
+                                <source media="(min-width: 376px)" srcset="./img/pubs/tablet_post-2.jpg">
+                                <!-- Екран 5: Мобільний (до 375px включно) — дефолтне фото в тегу img -->
+                                <img src="./img/pubs/mobile_post-2.jpg" alt="Equity associate" class="post-card__image">
+                            </picture>
+                        </div>
+                        <div class="post-card__body">
+                            <h3 class="post-card__title"><a href="#">Equity associate</a></h3>
+                            <span class="post-card__date">April 22</span>
+                            <p class="post-card__text">I'm a native speaker. Here's a summary of a machine. How it happened, before when everyone runs to search for...</p>
+                        </div>
+                    </article>
+
+                    <!-- Пост 3 -->
+                    <article class="post-card">
+                        <div class="post-card__image-wrapper">
+                            <picture>
+                                <!-- Екран 1: Великі монітори XL (від 1441px) -->
+                                <source media="(min-width: 1441px)" srcset="./img/pubs/xl_post-3.jpg">
+                                <!-- Екран 2: Звичайний десктоп (від 1025px до 1440px) -->
+                                <source media="(min-width: 1025px)" srcset="./img/pubs/post-3.jpg">
+                                <!-- Екран 3: Планшет L / Твій крок на 1024px (від 769px до 1024px) -->
+                                <source media="(min-width: 769px)" srcset="./img/pubs/tablet-l_post-3.jpg">
+                                <!-- Екран 4: Стандартний планшет (від 376px до 768px) -->
+                                <source media="(min-width: 376px)" srcset="./img/pubs/tablet_post-3.jpg">
+                                <!-- Екран 5: Мобільний (до 375px включно) — дефолтне фото в тегу img -->
+                                <img src="./img/pubs/mobile_post-3.jpg" alt="Equity associate" class="post-card__image">
+                            </picture>
+                        </div>
+                        <div class="post-card__body">
+                            <h3 class="post-card__title"><a href="#">Equity associate</a></h3>
+                            <span class="post-card__date">April 22</span>
+                            <p class="post-card__text">I'm a native speaker. Here's a summary of a machine. How it happened, before when everyone runs to search for...</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ПІДВАЛ САЙТУ -->
+    <footer class="footer">
+    <div class="container footer__container">
+        
+        <!-- ЕЛЕМЕНТ 1: Адреса і карта -->
+        <div class="footer__row">
+            <span class="footer__address">Kyiv, Mechnikova str, 14/1</span>
+            <a href="https://google.com" class="footer__map-link" target="_blank" rel="noopener">on map</a>
+        </div>
+
+        <!-- ЕЛЕМЕНТ 2: Контакти (ФБ, Телефон, Почта) -->
+        <div class="footer__contacts-block">
+            <a href="https://facebook.com" class="footer__facebook" target="_blank" rel="noopener" aria-label="Facebook">
+                <svg width="38" height="38" viewBox="0 0 38 38">
+                    <path d="M38 19c0-10.493-8.507-19-19-19S0 8.507 0 19c0 9.483 6.953 17.343 16.031 18.77V24.492h-4.758v-5.492h4.758v-4.186c0-4.695 2.797-7.29 7.078-7.29 2.05 0 4.195.366 4.195.366v4.61h-2.363c-2.327 0-3.053 1.444-3.053 2.924v3.576h5.2l-.832 5.492h-4.368V37.77C31.047 36.343 38 38.483 38 19z"/>
+                </svg>
+            </a>
+            <a href="tel:0800211927" class="footer__phone">0800 211 927</a>
+            <a href="mailto:contact@forstudy.space" class="footer__email">contact@forstudy.space</a>
+        </div>
+
+        <!-- ЕЛЕМЕНТ 3: Копірайт -->
+        <p class="footer__copy">&copy; 2021 HLEGAL Law company, LLC</p>
+        
+    </div>
+    </footer>
+
+</body>
+</html>

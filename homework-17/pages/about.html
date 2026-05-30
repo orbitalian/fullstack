@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="hlegal — про компанію. Досвід, команда, цінності.">
+
+  <title>About us | hlegal Law Company</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg">
+  <link rel="icon" type="image/png" href="./assets/icons/favicon.png">
+
+  <!-- Google Fonts: Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Стилі -->
+  <link rel="stylesheet" href="./css/main.css">
+
+  <!-- Scripts -->
+  <script src="../js/main.js" defer></script>
+</head>
+
+<body>
+
+  <!-- ======================================================
+    HEADER
+    Світлий варіант — для внутрішніх сторінок
+    Змінюється: клас header--light + logo__page з назвою сторінки
+  ======================================================= -->
+  <header class="header header--light" id="header">
+    <div class="header__inner">
+
+      <!-- Верхній рядок -->
+      <div class="header__top">
+
+        <div class="lang-switcher">
+          <a href="./uk/about.html" class="lang-switcher__item">УК</a>
+          <a href="./ru/about.html" class="lang-switcher__item">РУ</a>
+          <a href="#" class="lang-switcher__item lang-switcher__item--active">EN</a>
+        </div>
+
+        <div class="header-contacts">
+          <span class="header-contacts__address">Kyiv, Mechnikova str, 14/1</span>
+          <span class="header-contacts__separator">•</span>
+          <a href="tel:+380800211927" class="header-contacts__phone">0800 211 927</a>
+        </div>
+
+        <div class="header-social">
+          <a href="#" class="header-social__link" aria-label="Facebook">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Нижній рядок -->
+      <div class="header__bottom">
+
+        <!-- Лого + назва сторінки -->
+        <a href="./index.html" class="logo" aria-label="hlegal — на головну">
+          <span class="logo__name">
+            <span>h</span>legal
+            <!-- logo__page — унікально для світлого хедера -->
+            <span class="logo__page">/ about us</span>
+          </span>
+          <span class="logo__sub">Law Company</span>
+        </a>
+
+        <nav class="nav" id="nav" aria-label="Основна навігація">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <!-- is-active на поточній сторінці -->
+              <a href="./about.html" class="nav__link is-active">about us</a>
+            </li>
+            <li class="nav__item">
+              <a href="./services.html" class="nav__link">services</a>
+            </li>
+            <li class="nav__item">
+              <a href="./team.html" class="nav__link">team</a>
+            </li>
+            <li class="nav__item">
+              <a href="./publications.html" class="nav__link">publications</a>
+            </li>
+            <li class="nav__item">
+              <a href="./contact.html" class="nav__link">contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="burger" id="burger" aria-label="Відкрити меню" aria-expanded="false" aria-controls="nav">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+
+      </div>
+
+    </div>
+  </header>
+
+
+  <main>
+    <!-- Контент сторінки -->
+  </main>
+
+
+  <footer class="footer" id="footer">
+    <div class="container">
+      <!-- контент футера -->
+    </div>
+  </footer>
+
+</body>
+</html>

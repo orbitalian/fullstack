@@ -1,0 +1,156 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// =============================================================================
+// ADVANTAGES & TABS SECTION
+// =============================================================================
+
+.advantages {
+    position: relative;
+    background-color: transparent; // Прозора, під нею плавно продовжується градієнт
+    z-index: 2;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media (min-width: $bp-tablet-l) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-xl;
+
+        
+        @media (min-width: $bp-tablet-l) {
+            flex-direction: row;
+            align-items: center;
+            gap: 60px;
+        }
+    }
+
+    // ЛІВА ЧАСТИНА: Контейнер для вертикальних перемикачів
+    &__tabs {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        white-space: nowrap;
+        gap: 30px;
+        width: calc(100% + (#{$container-padding-tablet} * 2));
+        margin-left: -$container-padding-tablet;
+        margin-right: -$container-padding-tablet;
+        padding-bottom: $spacing-md;
+        
+        
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        @media (max-width: $bp-tablet){
+            //width: calc(100% + (#{$container-padding-mobile} *2));
+            //margin-left: -$container-padding-mobile;
+            margin-left: -60px;
+            margin-right: -$container-padding-mobile;
+            //padding-left: $container-padding-mobile;
+            padding-left: 60px;
+            padding-right: $container-padding-mobile;
+        }
+
+        @media (min-width: $bp-tablet-l) {
+            flex-direction: column;
+            overflow-x: visible;
+            width: 40%;
+            margin-left: 0;
+            margin-right: 0;
+            padding-left: 0;
+            padding-right: 60px; // Відступ від лінії до тексту табів
+            border-right: 4px solid rgba(255, 255, 255, 0.1); // Сіра лінія праворуч
+            padding-bottom: 0;
+        }
+    }
+
+    // Самі кнопки-таби
+    &__tab {
+        font-size: 20px;
+        font-weight: $font-weight-bold;
+        color: $color-grey-text; // За замовчуванням тьмяні
+        text-align: left;
+        transition: color $transition-base;
+        white-space: nowrap;
+
+        @media (min-width: $bp-tablet) {
+            font-size: 38px;
+            margin-bottom: $spacing-lg;
+            
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &:hover {
+            color: $color-accent; // При наведенні стають рожево-червоними
+        }
+
+        // АКТИВНИЙ ТАБ: Горить яскравим градієнтом або акцентним кольором
+        &--active {
+            background: $gradient-red-text;
+            cursor: default;
+            pointer-events: none;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+
+
+            // На десктопі активний таб підсвічує лінію праворуч
+            @media (min-width: $bp-tablet-l) {
+                position: relative;
+                
+                // Якщо за макетом лінія міняє колір навпроти активного табу:
+                &::after {
+                    content: "";
+                    position: absolute;
+                    right: -64px; // Зсуваємо чітко на нашу бордер-лінію
+                    top: 0;
+                    width: 4px;
+                    height: 100%;
+                    background-color: $color-accent;
+                }
+            }
+        }
+    }
+
+    // ПРАВА ЧАСТИНА: Контент активного табу
+    &__content {
+        width: 100%;
+
+        @media (min-width: $bp-tablet-l) {
+            width: 65%;
+            padding-left: 20px;
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: $font-weight-bold;
+        color: #fff;
+        line-height: 1.3;
+        margin-bottom: $spacing-lg;
+
+        @media (min-width: $bp-tablet) {
+            font-size: 30px;
+        }
+
+        @media (min-width: $bp-desktop) {
+            font-size: 30px;
+        }
+    }
+
+    &__text {
+        font-size: $font-size-base;
+        line-height: 1.6;
+        color: #fff;
+        opacity: 0.8; // Робимо текст читабельним, але не занадто яскравим
+    }
+}

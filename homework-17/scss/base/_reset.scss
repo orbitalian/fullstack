@@ -1,0 +1,171 @@
+// =============================================================================
+// RESET
+// =============================================================================
+
+@use '../abstracts/variables' as *;
+
+// -----------------------------------------------------------------------------
+// BOX MODEL
+// -----------------------------------------------------------------------------
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+// -----------------------------------------------------------------------------
+// DOCUMENT
+// -----------------------------------------------------------------------------
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-base;
+  color: $color-main;
+  //background-color: $color-grey-bg;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+// -----------------------------------------------------------------------------
+// TYPOGRAPHY
+// -----------------------------------------------------------------------------
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $font-weight-bold;
+  line-height: $line-height-heading;
+  color: $color-main;
+}
+
+p {
+  line-height: $line-height-base;
+}
+
+b, strong {
+  font-weight: $font-weight-bold;
+}
+
+small {
+  font-size: $font-size-small;
+}
+
+
+// -----------------------------------------------------------------------------
+// СПИСКИ
+// -----------------------------------------------------------------------------
+
+ul, ol {
+  list-style: none;
+}
+
+// Семантичні списки у контенті — повертаємо маркери
+.content ul,
+.content ol {
+  padding-left: $spacing-lg;
+}
+
+.content ul {
+  list-style: disc;
+}
+
+.content ol {
+  list-style: decimal;
+}
+
+.content li + li {
+  margin-top: $spacing-xs;
+}
+
+
+// -----------------------------------------------------------------------------
+// ПОСИЛАННЯ
+// -----------------------------------------------------------------------------
+
+a {
+  color: $color-link;
+  text-decoration: none;
+  transition: color $transition-base;
+
+  &:hover {
+    color: $color-link-hover;
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// МЕДІА
+// -----------------------------------------------------------------------------
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+
+// -----------------------------------------------------------------------------
+// ФОРМИ
+// -----------------------------------------------------------------------------
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+fieldset {
+  border: none;
+}
+
+
+// -----------------------------------------------------------------------------
+// ТАБЛИЦІ
+// -----------------------------------------------------------------------------
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+// -----------------------------------------------------------------------------
+// РІЗНЕ
+// -----------------------------------------------------------------------------
+
+hr {
+  border: none;
+  border-top: 1px solid $color-grey-separator;
+  margin-block: $spacing-lg;
+}
+

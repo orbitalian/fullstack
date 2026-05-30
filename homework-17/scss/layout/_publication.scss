@@ -1,0 +1,160 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+
+
+.publications {
+    background-color: $color-grey-bg;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media (min-width: $bp-tablet-l) {
+        padding-top: 80px;
+        padding-bottom: 100px;
+    }
+
+    &__subtitle {
+        display: block;
+        width: fit-content;
+        font-size: $font-size-small;
+        font-weight: $font-weight-bold;
+        color: $color-link;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: $spacing-xs;
+        transition: color $transition-base;
+
+        &:hover {
+            color: $color-accent;
+            cursor: pointer;
+        }
+    }
+
+    &__main-title {
+        background: $gradient-red-text;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+        font-size: 32px;
+        font-weight: $font-weight-bold;
+        line-height: 1.2;
+        margin-bottom: $spacing-xl;
+        cursor: default;
+        pointer-events: none;
+        
+        @media (min-width: $bp-tablet-l) {
+            font-size: 38px;
+            margin-bottom: 40px;
+        }
+    }
+
+    // СІТКА ДЛЯ КАРТОК (Виправлено: третя картка залишається ВЕРТИКАЛЬНОЮ)
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr; // 1. Мобільний — 1 колонка
+        gap: $spacing-lg;
+
+        // 2. ПЛАНШЕТ (від 768px до 1023px) — Картка розширюється на 2 колонки, але форма вертикальна
+        @media (min-width: $bp-tablet) and (max-width: 1023px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+
+            .post-card:last-child {
+                grid-column: 1 / span 2; // Розтягується на всю ширину гріда (наприклад, твої 648px)
+                flex-direction: column;  // ЗАЛИШАЄТЬСЯ ВЕРТИКАЛЬНОЮ (як на макеті)
+                
+                // Налаштовуємо пропорції картинки для широкої вертикальної картки
+                .post-card__image-wrapper {
+                    width: 100%;
+                    height: 240px; // Картинка зверху, як на скріншоті
+                }
+
+                .post-card__body {
+                    width: 100%;
+                }
+            }
+        }
+
+        // 3. ДЕСКТОП (від 1024px) — 3 колонки в один ряд
+        @media (min-width: $bp-tablet-l) {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+    }
+}
+
+// -----------------------------------------------------------------------------
+// POST CARD STYLES
+// -----------------------------------------------------------------------------
+.post-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform $transition-base, box-shadow $transition-base;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
+        cursor: pointer;
+
+        .post-card__title a {
+            color: $color-accent; // При ховері на картку заголовок стає червоно-рожевим
+        }
+    }
+
+    &__image-wrapper {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+
+        picture, img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+
+    &__body {
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    &__title {
+        font-size: 16px;
+        font-weight: $font-weight-bold;
+        line-height: 1.4;
+        margin-bottom: 14px;
+
+        a {
+            color: $color-link; // Світло-синій заголовок з макета
+            transition: color $transition-base;
+            text-decoration: none; 
+        }
+    }
+
+    &__date {
+        display: block;
+        font-size: 12px;
+        font-weight: $font-weight-bold;
+        color: #B3B3BA;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: $spacing-md;
+        padding-bottom: $spacing-sm;
+        border-bottom: 4px solid #E6E6F0; // Твоя тонка світла лінія під датою
+    }
+
+    &__text {
+        font-size: $font-size-base;
+        line-height: 1.5;
+        color: $color-main;
+        opacity: 0.9;
+    }
+}
