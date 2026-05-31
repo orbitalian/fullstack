@@ -1,0 +1,391 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// Базове біле тло для всієї світлої сторінки
+.page--light {
+    background-color: #FFFFFF;
+}
+
+// =============================================================================
+// ABOUT INTRO SECTION (Перший текстовий блок)
+// =============================================================================
+.about-intro {
+    background-color: #FFFFFF;
+    // Робимо відступи, щоб текст мав багато повітря і красиво став під шапкою
+    padding-top: 40px; 
+    padding-bottom: 60px;
+
+    @media (min-width: 1024px) {
+        padding-top: 60px;
+        padding-bottom: 100px;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        // На десктопі ділимо на дві колонки: зліва великий текст, справа — цифри статистики
+        @media (min-width: 1024px) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 60px;
+        }
+    }
+
+    // Ліва текстова частина
+    &__content {
+        width: 100%;
+        
+        @media (min-width: 1024px) {
+            width: 62%; // Займає більшу частину ширини
+        }
+    }
+
+    &__title {
+        background: $gradient-red-text; // Твій фірмовий червоний градієнт
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+        font-size: 32px;
+        font-weight: $font-weight-bold;
+        line-height: 1.2;
+        margin-bottom: $spacing-lg;
+        cursor: default;
+        pointer-events: none;
+
+        @media (min-width: 1024px) {
+            font-size: 38px;
+        }
+    }
+
+    &__text {
+        font-size: 19px;
+        line-height: 1.6;
+        color: $color-main;
+        margin-bottom: $spacing-md;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// =============================================================================
+// STATISTICS BLOCK (Цифри 10+, 30+, 500+)
+// =============================================================================
+
+.stats-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    //gap: 30px;
+    //padding-top: $spacing-md;
+    position: relative;
+    padding-left: 30px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0px;
+        width: 4px;
+        background-color: #E6E6F0;
+        //height: calc(100% - 40px);
+        height: 100%;
+
+    }
+
+    @media (min-width: 1024px) {
+        width: 32%; 
+        padding-left: 30px;
+        //padding-top: 0;
+        //border-left: 4px solid #E6E6F0; // Лінія-розділювач
+        //padding-left: 30px; // Відступ від лініїї
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 40px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    // Контейнер для иконки и самой цифры
+    &__header {
+        display: flex;
+        align-items: center;
+        gap: 10px; // Отступ между иконкой и числом
+        margin-bottom: $spacing-xs;
+    }
+
+    &__icon {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+        display: block;
+    }
+
+    // Огромные красные цифры с градиентным текстом, как мы любим
+    &__number {
+        background: $gradient-red-text; // Твой фирменный красный градиент
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+        font-size: 32px;
+        font-weight: $font-weight-bold;
+        line-height: 1;
+        cursor: default;
+        pointer-events: none;
+
+        @media (min-width: 768px) {
+            font-size: 42px;
+        }
+    }
+
+    // Подпись под цифрой (years of relevant experience и т.д.)
+    &__desc {
+        font-size: $font-size-base;
+        line-height: 1.4;
+        color: $color-grey-text;
+        font-weight: $font-weight-regular;
+        //max-width: 400px;
+    }
+}
+
+// =============================================================================
+// ABOUT TEAM BANNER (Велике фото команди з написом)
+// =============================================================================
+
+.about-team-banner {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    @media (min-width: 1024px) {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    &__fluid-img,
+    picture {
+        display: block;
+        width: 100%;
+        height: auto; 
+        object-fit: contain;
+    }
+}
+
+
+// =============================================================================
+// ABOUT PHILOSOPHY SECTION (Блок філософії та якості)
+// =============================================================================
+
+.about-philosophy {
+    background-color: #FFFFFF;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @media (min-width: 1024px) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    &__container {
+        display: flex;
+        // де заголовок (right) слухняно стає ПІСЛЯ тексту (left)
+        flex-direction: column;
+        gap: 30px;
+
+        // На десктопі (від 1024px) блоки стають поруч у класичний ряд
+        @media (min-width: 1024px) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 60px;
+        }
+    }
+
+    // ЛІВА ЧАСТИНА: Абзаци тексту
+    &__left {
+        width: 100%;
+
+        @media (min-width: 1024px) {
+            width: 80%;
+        }
+    }
+
+    &__text {
+        font-size: $font-size-base;
+        line-height: 1.6;
+        color: $color-main; // Твій основний темний колір
+        margin-bottom: $spacing-md;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        // Окремий акцентний абзац (Quality is what we care...)
+        &--bold {
+            font-size: 18px;
+            font-weight: $font-weight-bold;
+            color: #46466E; // Особливий глибокий колір для важливої фрази
+            
+            @media (min-width: 768px) {
+                font-size: 22px;
+            }
+        }
+    }
+
+    // ПРАВА ЧАСТИНА: Великий заголовок-дубль
+    &__right {
+        width: 100%;
+
+        @media (min-width: 1024px) {
+            width: 40%; // Трохи вужчий за текстову частину, щоб було більше повітря
+        }
+    }
+
+    &__title {
+        background: $gradient-red-text; // Твій фірмовий червоно-рожевий градієнт
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+        
+        font-size: 28px;
+        font-weight: $font-weight-bold;
+        line-height: 1.2;
+        cursor: default;
+        pointer-events: none;
+
+        @media (min-width: 768px) {
+            font-size: 34px;
+        }
+
+        @media (min-width: 1024px) {
+            font-size: 38px; // Великі літери на великих моніторах
+        }
+    }
+}
+
+// =============================================================================
+// ABOUT ACHIEVEMENTS SECTION (Блок досягнень та нагород з логотипами)
+// =============================================================================
+
+.about-achievements {
+    background-color: $color-grey-bg; // Легка сіра підкладка під весь блок як на головній
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media (min-width: 1024px) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    // Маленький надзаголовок "Achievements"
+    &__subtitle {
+        display: flex;
+        justify-content: center;
+        font-size: $font-size-small;
+        font-weight: $font-weight-bold;
+        color: $color-main;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: $spacing-xl;
+        transition: color $transition-base;
+
+        /*&:hover {
+            color: $color-accent;
+            cursor: pointer;
+        }*/
+    }
+
+    // Обгортка для слайдера гнучкої структури
+    &__slider {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    // СІТКА ДЛЯ 4 ЛОГОТИПІВ НАГОРОД
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr; // На мобільних по 1 в ряд
+        gap: 20px;
+
+        //tablet перебудовуємо 2х2
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        // НА ДЕСКТОПІ (від 1024px) — 4 колонки в один горизонтальний ряд
+        @media (min-width: 1024px) {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+        }
+    }
+
+    // Клітинка з логотипом нагороди
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #FFFFFF;
+        border-radius: 12px;
+        height: 110px;
+        transition: transform $transition-base, box-shadow $transition-base;
+
+        img {
+            max-width: 100%;
+            height: auto;
+            max-height: 110px;
+            object-fit: contain;
+            display: block;
+        }
+
+        &:hover {
+            cursor: pointer;
+            transform: translateY(-3px); 
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
+        }
+    }
+
+    // КРАПКИ-ІНДИКАТОРИ СЛАЙДЕРА 
+    &__dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        margin-top: 10px;
+    }
+
+    &__dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: $color-link; 
+        opacity: 0.2; // Неактивні напівпрозорі
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        transition: all $transition-base;
+
+        &:hover {
+            opacity: 0.6;
+        }
+
+        &--active {
+            opacity: 1; // Активна горить на повну
+            cursor: default;
+        }
+    }
+}

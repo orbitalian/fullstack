@@ -1,119 +1,180 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="hlegal — про компанію. Досвід, команда, цінності.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Hlegal</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Scripts -->
+    <script src="../js/main.js" defer></script>
 
-  <title>About us | hlegal Law Company</title>
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg">
-  <link rel="icon" type="image/png" href="./assets/icons/favicon.png">
-
-  <!-- Google Fonts: Montserrat -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- Стилі -->
-  <link rel="stylesheet" href="./css/main.css">
-
-  <!-- Scripts -->
-  <script src="../js/main.js" defer></script>
 </head>
+<!-- Додаємо клас page--light, щоб легко перефарбувати шапку та підвал у темні кольори на світлому фоні -->
+<body class="page--light">
 
-<body>
+    <!-- ШАПКА САЙТУ -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="../index.html" class="header__logo">
+              <img src="../img/logos/Logo_dark.svg" alt="Hlegal Law Company">
+              <span class="header__logo-page">about us</span>
+            </a>
+            <div class="header__contacts">
+                <div class="header__lang">
+                    <span class="header__lang-item">ук</span>
+                    <span class="header__lang-item">pl</span>
+                    <span class="header__lang-item header__lang-item--active">en</span>
+                </div>
+                <span class="header__address">Kyiv, Mechnykov St, 14/1</span>
+                <a href="tel:0800211927" class="header__phone">0800 211 927</a>
+                <a href="https://facebook.com" class="header__facebook" target="_blank" rel="noopener">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </a>
+            </div>
+            <nav class="header__nav nav">
+                <ul class="nav__list">
+                    <!-- Пункт about us тепер має клас активності nav__link--current -->
+                    <li class="nav__item"><a href="about.html" class="nav__link nav__link--current">about us</a></li>
+                    <li class="nav__item"><a href="services.html" class="nav__link">services</a></li>
+                    <li class="nav__item"><a href="team.html" class="nav__link">team</a></li>
+                    <li class="nav__item"><a href="publications.html" class="nav__link">publications</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">contact</a></li>
+                </ul>
+            </nav>
+            <button class="header__burger burger" aria-label="Open menu">
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+            </button>
+        </div>
+    </header>
 
-  <!-- ======================================================
-    HEADER
-    Світлий варіант — для внутрішніх сторінок
-    Змінюється: клас header--light + logo__page з назвою сторінки
-  ======================================================= -->
-  <header class="header header--light" id="header">
-    <div class="header__inner">
+    <main>
+        <!-- БЛОК 1: ІНТРО ТА ЦИФРИ -->
+        <section class="about-intro">
+            <div class="container about-intro__container">
+                <!-- Ліва частина: Великий заголовок та опис -->
+                <div class="about-intro__content">
+                    <h1 class="about-intro__title">We turn over the idea of legal services</h1>
+                    <p class="about-intro__text">
+                        Consolidating many years of experience and practice, the company's lawyers accompany complex projects and achieve the adoption of a number of decisions that are important for the industry. Many people form the practice of applying the law of the sea in Ukraine.
+                    </p>
+                    <p class="about-intro__text">
+                        HLEGAL is a reliable business partner, confirmed by stable cooperation with international law firms, the trust of large Ukrainian and international companies, and the recognition of professional ratings.
+                    </p>
+                </div>
+                
+                <!-- Права частина: Статистика з іконками та червоним текстом -->
+                <div class="about-intro__stats stats-block">
+                    <div class="stats-block__item">
+                        <div class="stats-block__header">
+                            <img src="../img/about-us/flag.svg" alt="" class="stats-block__icon">
+                            <span class="stats-block__number">10+</span>
+                        </div>
+                        <p class="stats-block__desc">years of relevant experience</p>
+                    </div>
+                    <div class="stats-block__item">
+                        <div class="stats-block__header">
+                            <img src="../img/about-us/case.svg" alt="" class="stats-block__icon">
+                            <span class="stats-block__number">30+</span>
+                        </div>
+                        <p class="stats-block__desc">active clients who entrust us with their orders on a monthly basis</p>
+                    </div>
+                    <div class="stats-block__item">
+                        <div class="stats-block__header">
+                            <img src="../img/about-us/star.svg" alt="" class="stats-block__icon">
+                            <span class="stats-block__number">500+</span>
+                        </div>
+                        <p class="stats-block__desc">hours of pro bono work annually</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <!-- Верхній рядок -->
-      <div class="header__top">
+        <!-- БЛОК 2: ВЕЛИКЕ ФОТО КОМАНДИ З НАДПИСОМ -->
+        <section class="about-team-banner">
+            
+                <picture>
+                    <source media="(min-width: 1441px)" srcset="../img/about-us/team_photo_xl.jpg">
+                    <source media="(min-width: 1025px)" srcset="../img/about-us/team_photo_xl.jpg">
+                    <source media="(min-width: 769px)" srcset="../img/about-us/team_photo_xl.jpg">
+                    <img src="../img/about-us/team_photo_xl.jpg" alt="Hlegal Team" class="about-team-banner__fluid-img">
+                </picture>
+            
+        </section>
 
-        <div class="lang-switcher">
-          <a href="./uk/about.html" class="lang-switcher__item">УК</a>
-          <a href="./ru/about.html" class="lang-switcher__item">РУ</a>
-          <a href="#" class="lang-switcher__item lang-switcher__item--active">EN</a>
+        <!-- БЛОК 3: ТЕКСТ ТА ДРУГИЙ ЗАГОЛОВОК -->
+        <section class="about-philosophy">
+            <div class="container about-philosophy__container">
+                <div class="about-philosophy__left">
+                    <p class="about-philosophy__text">
+                        The historically unchanged legal profession has begun to reformat in recent years. Clients are feeling this, but law firms are still resisting evolution. Clients need convenience, simplicity, transparent payment. Google, IBM Watson, Symantec Clearwell prove that the technological revolution in legal services has begun and is imminent.
+                    </p>
+                    <p class="about-philosophy__text">
+                        Quality is what we care about the most.
+                    </p>
+                    <p class="about-philosophy__text">
+                        It's simple. If you are unhappy with our work, we will refund your money. We trust our clients. And we want our clients to trust us too.
+                    </p>
+                </div>
+                <div class="about-philosophy__right">
+                    <h2 class="about-philosophy__title">Quality is what we care about the most.</h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- БЛОК 4: ДОСЯГНЕННЯ ТА ЛОГОТИПИ (СЛАЙДЕР) -->
+        <section class="about-achievements">
+            <div class="container">
+                <span class="about-achievements__subtitle">Achievements</span>
+                <div class="about-achievements__slider">
+                    <div class="about-achievements__grid">
+                        <div class="about-achievements__item"><img src="../img/about-us/legal-500_xl.jpg" alt="Legal 500"></div>
+                        <div class="about-achievements__item"><img src="../img/about-us/legal_awards_xl.jpg" alt="Ukrainian Law Awards"></div>
+                        <div class="about-achievements__item"><img src="../img/about-us/leader_xl.jpg" alt="Лідери ринку"></div>
+                        <div class="about-achievements__item"><img src="../img/about-us/ulf_xl.jpg" alt="Ulf 2017"></div>
+                    </div>
+                    <!-- Крапки слайдера досягнень -->
+                    <div class="about-achievements__dots">
+                        <button class="about-achievements__dot about-achievements__dot--active" aria-label="Slide 1"></button>
+                        <button class="about-achievements__dot" aria-label="Slide 2"></button>
+                        <button class="about-achievements__dot" aria-label="Slide 3"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ПІДВАЛ САЙТУ -->
+    <footer class="footer">
+    <div class="container footer__container">
+        
+        <!-- ЕЛЕМЕНТ 1: Адреса і карта -->
+        <div class="footer__row">
+            <span class="footer__address">Kyiv, Mechnikova str, 14/1</span>
+            <a href="https://google.com" class="footer__map-link" target="_blank" rel="noopener">on map</a>
         </div>
 
-        <div class="header-contacts">
-          <span class="header-contacts__address">Kyiv, Mechnikova str, 14/1</span>
-          <span class="header-contacts__separator">•</span>
-          <a href="tel:+380800211927" class="header-contacts__phone">0800 211 927</a>
+        <!-- ЕЛЕМЕНТ 2: Контакти (ФБ, Телефон, Почта) -->
+        <div class="footer__contacts-block">
+            <a href="https://facebook.com" class="footer__facebook" target="_blank" rel="noopener" aria-label="Facebook">
+                <svg width="38" height="38" viewBox="0 0 38 38">
+                    <path d="M38 19c0-10.493-8.507-19-19-19S0 8.507 0 19c0 9.483 6.953 17.343 16.031 18.77V24.492h-4.758v-5.492h4.758v-4.186c0-4.695 2.797-7.29 7.078-7.29 2.05 0 4.195.366 4.195.366v4.61h-2.363c-2.327 0-3.053 1.444-3.053 2.924v3.576h5.2l-.832 5.492h-4.368V37.77C31.047 36.343 38 38.483 38 19z"/>
+                </svg>
+            </a>
+            <a href="tel:0800211927" class="footer__phone">0800 211 927</a>
+            <a href="mailto:contact@forstudy.space" class="footer__email">contact@forstudy.space</a>
         </div>
 
-        <div class="header-social">
-          <a href="#" class="header-social__link" aria-label="Facebook">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-            </svg>
-          </a>
-        </div>
-
-      </div>
-
-      <!-- Нижній рядок -->
-      <div class="header__bottom">
-
-        <!-- Лого + назва сторінки -->
-        <a href="./index.html" class="logo" aria-label="hlegal — на головну">
-          <span class="logo__name">
-            <span>h</span>legal
-            <!-- logo__page — унікально для світлого хедера -->
-            <span class="logo__page">/ about us</span>
-          </span>
-          <span class="logo__sub">Law Company</span>
-        </a>
-
-        <nav class="nav" id="nav" aria-label="Основна навігація">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <!-- is-active на поточній сторінці -->
-              <a href="./about.html" class="nav__link is-active">about us</a>
-            </li>
-            <li class="nav__item">
-              <a href="./services.html" class="nav__link">services</a>
-            </li>
-            <li class="nav__item">
-              <a href="./team.html" class="nav__link">team</a>
-            </li>
-            <li class="nav__item">
-              <a href="./publications.html" class="nav__link">publications</a>
-            </li>
-            <li class="nav__item">
-              <a href="./contact.html" class="nav__link">contact</a>
-            </li>
-          </ul>
-        </nav>
-
-        <button class="burger" id="burger" aria-label="Відкрити меню" aria-expanded="false" aria-controls="nav">
-          <span class="burger__line"></span>
-          <span class="burger__line"></span>
-          <span class="burger__line"></span>
-        </button>
-
-      </div>
-
+        <!-- ЕЛЕМЕНТ 3: Копірайт -->
+        <p class="footer__copy">&copy; 2021 HLEGAL Law company, LLC</p>
+        
     </div>
-  </header>
-
-
-  <main>
-    <!-- Контент сторінки -->
-  </main>
-
-
-  <footer class="footer" id="footer">
-    <div class="container">
-      <!-- контент футера -->
-    </div>
-  </footer>
+    </footer>
 
 </body>
 </html>
