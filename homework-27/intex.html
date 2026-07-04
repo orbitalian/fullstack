@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JS Slider</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="slider-wrap">
+
+    <div class="slider-viewport" id="viewport">
+      <div class="slider-track" id="track">
+
+        <div class="slide">
+          <img src="https://picsum.photos/seed/slide1/1200/600" alt="Перший слайд — гірський пейзаж" />
+          <div class="slide-content">
+            <span class="slide-num">01</span>
+            <span class="slide-label">Перший слайд</span>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="https://picsum.photos/seed/slide2/1200/600" alt="Другий слайд — лісовий пейзаж" />
+          <div class="slide-content">
+            <span class="slide-num">02</span>
+            <span class="slide-label">Другий слайд</span>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="https://picsum.photos/seed/slide3/1200/600" alt="Третій слайд — морський пейзаж" />
+          <div class="slide-content">
+            <span class="slide-num">03</span>
+            <span class="slide-label">Третій слайд</span>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="https://picsum.photos/seed/slide4/1200/600" alt="Четвертий слайд — міський пейзаж" />
+          <div class="slide-content">
+            <span class="slide-num">04</span>
+            <span class="slide-label">Четвертий слайд</span>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="nav-btn nav-prev" id="prev" aria-label="Попередній">&#8249;</button>
+      <button class="nav-btn nav-next" id="next" aria-label="Наступний">&#8250;</button>
+    </div>
+
+    <div class="indicators" id="dots"></div>
+
+    <div class="controls">
+      <button class="ctrl-btn" id="playBtn">⏸ Пауза</button>
+    </div>
+
+    <div class="status" id="status">Автопрогравання активне · ← → для навігації</div>
+
+  </div>
+
+  <script src="slider.js"></script>
+</body>
+</html>
