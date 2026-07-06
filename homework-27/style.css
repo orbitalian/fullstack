@@ -114,8 +114,8 @@ body {
   background: rgba(255, 255, 255, 0.35);
 }
 
-.nav-prev { left: 12px; }
-.nav-next { right: 12px; }
+.nav-prev { left: 12px; padding-right: 2px; padding-bottom: 4px; }
+.nav-next { right: 12px; padding-left: 2px; padding-bottom: 4px; }
 
 /* Dots */
 .indicators {
