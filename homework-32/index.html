@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music Search</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --pink:   #ff2d78;
+      --purple: #b721ff;
+      --blue:   #21d4fd;
+      --bg:     #0d0d14;
+      --card:   #16161f;
+      --border: #2a2a3a;
+      --text:   #f0f0f8;
+      --muted:  #6b6b8a;
+    }
+
+    body {
+      min-height: 100vh;
+      background: var(--bg);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      color: var(--text);
+      padding: 2rem 1rem 4rem;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .logo {
+      font-size: clamp(32px, 6vw, 56px);
+      font-weight: 800;
+      letter-spacing: -1px;
+      background: linear-gradient(90deg, var(--pink), var(--purple), var(--blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+
+    .tagline {
+      font-size: 14px;
+      color: var(--muted);
+      letter-spacing: 0.4px;
+    }
+
+    /* Search */
+    .search-wrap {
+      max-width: 600px;
+      margin: 0 auto 2.5rem;
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 16px 52px 16px 20px;
+      font-size: 16px;
+      background: var(--card);
+      border: 1.5px solid var(--border);
+      border-radius: 50px;
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .search-input::placeholder { color: var(--muted); }
+
+    .search-input:focus {
+      border-color: var(--pink);
+      box-shadow: 0 0 0 3px rgba(255,45,120,0.15);
+    }
+
+    .search-icon {
+      position: absolute;
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 20px;
+      pointer-events: none;
+    }
+
+    /* Status messages */
+    .status {
+      text-align: center;
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      min-height: 20px;
+    }
+
+    .status.error { color: var(--pink); }
+
+    /* Spinner */
+    .spinner {
+      display: none;
+      width: 36px;
+      height: 36px;
+      border: 3px solid var(--border);
+      border-top-color: var(--pink);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      margin: 2rem auto;
+    }
+
+    .spinner.show { display: block; }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Grid */
+    .results {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.25rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* Card */
+    .track-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .track-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(183,33,255,0.2);
+      border-color: var(--purple);
+    }
+
+    .track-img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      display: block;
+      background: var(--border);
+    }
+
+    .track-info {
+      padding: 12px 14px 14px;
+    }
+
+    .track-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 4px;
+    }
+
+    .track-artist {
+      font-size: 12px;
+      color: var(--muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 8px;
+    }
+
+    .track-genre {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 3px 8px;
+      border-radius: 20px;
+      background: linear-gradient(90deg, var(--pink), var(--purple));
+      color: #fff;
+    }
+
+    /* Audio preview */
+    .track-preview {
+      width: 100%;
+      height: 28px;
+      margin-top: 10px;
+      accent-color: var(--pink);
+    }
+
+    /* Empty state */
+    .empty {
+      text-align: center;
+      padding: 4rem 1rem;
+      display: none;
+    }
+
+    .empty.show { display: block; }
+
+    .empty-icon {
+      font-size: 56px;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .empty-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .empty-text {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      .results {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 0.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">🎵 SoundFind</div>
+    <div class="tagline">Живий пошук музики · powered by iTunes</div>
+  </header>
+
+  <div class="search-wrap">
+    <input
+      class="search-input"
+      id="searchInput"
+      type="text"
+      placeholder="Введіть назву треку або виконавця..."
+      autocomplete="off"
+      autofocus
+    />
+    <span class="search-icon">🔍</span>
+  </div>
+
+  <div class="status" id="status">Почніть вводити, щоб шукати музику</div>
+  <div class="spinner" id="spinner"></div>
+
+  <div class="empty" id="empty">
+    <span class="empty-icon">🎸</span>
+    <div class="empty-title">Нічого не знайдено</div>
+    <div class="empty-text">Спробуйте інший запит</div>
+  </div>
+
+  <div class="results" id="results"></div>
+
+  <script src="search.js"></script>
+</body>
+</html>
