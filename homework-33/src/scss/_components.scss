@@ -1,0 +1,70 @@
+// =============================================
+// Компоненти
+// =============================================
+@use 'variables' as *;
+
+// Кнопка
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-sm $spacing-lg;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: $radius-full;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  user-select: none;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
+
+  // Варіанти
+  &--primary {
+    background: $color-primary;
+    color: $color-white;
+  }
+
+  &--accent {
+    background: $color-accent;
+    color: $color-white;
+  }
+
+  &--outline {
+    background: transparent;
+    border: 2px solid $color-primary;
+    color: $color-primary;
+  }
+}
+
+// Картка
+.card {
+  background: $color-white;
+  border-radius: $radius-lg;
+  padding: $spacing-lg;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  }
+}
+
+// Контейнер
+.container {
+  width: 100%;
+  max-width: $bp-desktop;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+
+  @media (min-width: $bp-tablet) {
+    padding: 0 $spacing-lg;
+  }
+}

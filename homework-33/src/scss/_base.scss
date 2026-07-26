@@ -1,0 +1,45 @@
+// =============================================
+// Базові стилі
+// =============================================
+@use 'variables' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: $font-size;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-base;
+  line-height: $line-height;
+  color: $color-dark;
+  background-color: $color-white;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $color-secondary;
+  }
+}
+
+ul,
+ol {
+  list-style: none;
+}
