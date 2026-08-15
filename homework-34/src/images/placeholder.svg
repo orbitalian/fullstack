@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="200" viewBox="0 0 800 200">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#4f6ef7"/>
+      <stop offset="50%"  stop-color="#b721ff"/>
+      <stop offset="100%" stop-color="#ff2d78"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="200" rx="12" fill="#16161f"/>
+  <rect width="800" height="4" y="98" fill="url(#g)" opacity="0.6"/>
+  <text x="400" y="85" font-family="system-ui,sans-serif" font-size="18" fill="#6b6b8a" text-anchor="middle">Webpack</text>
+  <text x="400" y="120" font-family="system-ui,sans-serif" font-size="28" font-weight="700" fill="url(#g)" text-anchor="middle">Зображення оброблені ✓</text>
+</svg>
