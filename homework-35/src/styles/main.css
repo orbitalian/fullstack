@@ -1,0 +1,27 @@
+/* Base CSS */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --color-primary:   #4f6ef7;
+  --color-secondary: #b721ff;
+  --color-accent:    #ff2d78;
+  --color-bg:        #0d0d14;
+  --color-white:     #ffffff;
+  --color-muted:     #6b6b8a;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}

@@ -1,0 +1,44 @@
+// LESS змінні
+@color-primary:   #4f6ef7;
+@color-secondary: #b721ff;
+@color-accent:    #ff2d78;
+@spacing:         1rem;
+@radius:          12px;
+
+// Hero секція
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem 0;
+  background: linear-gradient(135deg, #0d0d14 0%, #1a1040 100%);
+
+  &__title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    background: linear-gradient(90deg, @color-primary, @color-secondary, @color-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.75rem;
+  }
+
+  &__subtitle {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    color: #6b6b8a;
+    margin-bottom: 2rem;
+  }
+
+  &__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 2rem;
+  }
+
+  &__img {
+    border-radius: @radius;
+    opacity: 0.9;
+  }
+}
