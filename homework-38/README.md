@@ -34,7 +34,7 @@ React проект створений за допомогою [Vite](https://vit
 
 ```bash
 # Клонувати репозиторій
-git clone https://github.com/YOUR_USERNAME/my-react-app.git
+git clone https://github.com/orbitalian/my-react-app.git
 
 # Перейти до папки проекту
 cd my-react-app
@@ -58,7 +58,7 @@ npm run build
 
 ## 🌐 Демо
 
-[Посилання на демо](https://YOUR_NETLIFY_LINK.netlify.app)
+[Посилання на демо](https://singular-creponne-8a1fd6.netlify.app)
 
 ## 📁 Структура проекту
 
